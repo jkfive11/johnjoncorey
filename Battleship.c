@@ -189,10 +189,7 @@ void print_screen(char input_char, int input_int)//will be 5 spaces in between e
   printf("   |%c%c%c%c%c|%c%c%c%c%c|%c%c%c%c%c|%c%c%c%c%c|%c%c%c%c%c|%c%c%c%c%c|%c%c%c%c%c|%c%c%c%c%c|%c%c%c%c%c|%c%c%c%c%c|\n", j[0], j[0], j[0], j[0], j[0], j[1], j[1], j[1], j[1], j[1], j[2], j[2], j[2], j[2], j[2], j[3], j[3], j[3], j[3], j[3], j[4], j[4], j[4], j[4], j[4], j[5], j[5], j[5], j[5], j[5], j[6], j[6], j[6], j[6], j[6], j[7], j[7], j[7], j[7], j[7], j[8], j[8], j[8], j[8], j[8], j[9], j[9], j[9], j[9], j[9], j[10], j[10], j[10], j[10], j[10]);
   printf("    ___________________________________________________________\n");
   //these below are errors, just incase an invalid number is called
-    if (input_int>=10)
-  printf("please enter valid number");
-    if (input_char!='a'&&input_char!='b'&&input_char!='c'&&input_char!='d'&&input_char!='e'&&input_char!='f'&&input_char!='g'&&input_char!='h'&&input_char!='i'&&input_char!='j')
-  printf("please enter a valid letter");
+
 }
 
 
@@ -201,35 +198,35 @@ void change_space(char input_char, int input_int)
 
   if (input_char=='a')
    a[input_int]='X';
-    
+
     if (input_char=='b')
      b[input_int]='X';
-  
+
     if (input_char=='c')
    c[input_int]='X';
-  
+
     if (input_char=='d')
     d[input_int]='X';
-  
+
     if (input_char=='e')
     e[input_int]='X';
-  
+
     if (input_char=='f')
     f[input_int]='X';
-  
+
     if (input_char=='g')
     g[input_int]='X';
-  
+
     if (input_char=='h')
      h[input_int]='X';
-  
+
     if (input_char=='i')
      i[input_int]='p';
-  
+
     if (input_char=='j')
      j[input_int]='X';
 
-  
+
 }
 
 int main()
@@ -238,10 +235,17 @@ int input_int;
 char input_char;
 initialize_arrays();
 print_screen(input_char, input_int);
+
 printf("Input the row of letters that you'd like to chance to 'x'");
 scanf("%c", &input_char);
+if (input_char!='a'&&input_char!='b'&&input_char!='c'&&input_char!='d'&&input_char!='e'&&input_char!='f'&&input_char!='g'&&input_char!='h'&&input_char!='i'&&input_char!='j')
+    printf("please enter a valid letter\n");
+
 printf("Input the number of the box that you'd like to change to 'x'");
 scanf("%d", &input_int);
+if (input_int>=10)
+  printf("please enter valid number\n");
+
 input_int=input_int-1;//BECAUSE OF ARRAYS
 change_space(input_char, input_int);
 print_screen(input_char, input_int);
