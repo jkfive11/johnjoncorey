@@ -1,5 +1,5 @@
 //BattleShip
-//Jonathan Keller
+//Jonathan Keller John Lowery Correy Huppert
 
 #include <stdio.h>
 
