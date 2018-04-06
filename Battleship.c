@@ -2,6 +2,7 @@
 //Jonathan Keller
 
 #include <stdio.h>
+#include <math.h>
 
 //h (hidden) values figure out if it is hit or miss, while the other ones are the ones that are diplayed (` for miss, X for hit, and spaces for not tried yet)
 char a[9];
