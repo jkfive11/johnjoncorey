@@ -12,87 +12,89 @@
 
 //h (hidden) values figure out if it is hit or miss, while the other ones are the ones that are diplayed (` for miss, X for hit, and spaces for not tried yet)
 
-char a[9];
 
-int ah[9];
+char a[10];
 
-char b[9];
+int ah[10];
 
-int bh[9];
+char b[10];
 
-char c[9];
+int bh[10];
 
-int ch[9];
+char c[10];
 
-char d[9];
+int ch[10];
 
-int dh[9];
+char d[10];
 
-char e[9];
+int dh[10];
 
-int eh[9];
+char e[10];
 
-char f[9];
+int eh[10];
 
-int fh[9];
+char f[10];
 
-char g[9];
+int fh[10];
 
-int gh[9];
+char g[10];
 
-char h[9];
+int gh[10];
 
-int hh[9];
+char h[10];
 
-char i[9];
+int hh[10];
 
-int ih[9];
+char i[10];
 
-char j[9];
+int ih[10];
 
-int jh[9];
+char j[10];
+
+int jh[10];
 
 
 
-char a2[9];
+char a2[10];
 
-int ah2[9];
+int ah2[10];
 
-char b2[9];
+char b2[10];
 
-int bh2[9];
+int bh2[10];
 
-char c2[9];
+char c2[10];
 
-int ch2[9];
+int ch2[10];
 
-char d2[9];
+char d2[10];
 
-int dh2[9];
+int dh2[10];
 
-char e2[9];
+char e2[10];
 
-int eh2[9];
+int eh2[10];
 
-char f2[9];
+char f2[10];
 
-int fh2[9];
+int fh2[10];
 
-char g2[9];
+char g2[10];
 
-int gh2[9];
+int gh2[10];
 
-char h2[9];
+char h2[10];
 
-int hh2[9];
+int hh2[10];
 
-char i2[9];
+char i2[10];
 
-int ih2[9];
+int ih2[10];
 
-char j2[9];
+char j2[10];
 
-int jh2[9];
+int jh2[10];
+
 
 
 
