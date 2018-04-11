@@ -1,7 +1,7 @@
 //BattleShip
 
 //Jonathan Keller
-
+//Corey Huppert
 
 
 #include <stdio.h>
