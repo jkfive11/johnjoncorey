@@ -1,7 +1,7 @@
 //BattleShip
 
 //Jonathan Keller
-//Corey Huppert
+
 
 
 #include <stdio.h>
@@ -12,89 +12,87 @@
 
 //h (hidden) values figure out if it is hit or miss, while the other ones are the ones that are diplayed (` for miss, X for hit, and spaces for not tried yet)
 
+char a[9];
 
-char a[10];
+int ah[9];
 
-int ah[10];
+char b[9];
 
-char b[10];
+int bh[9];
 
-int bh[10];
+char c[9];
 
-char c[10];
+int ch[9];
 
-int ch[10];
+char d[9];
 
-char d[10];
+int dh[9];
 
-int dh[10];
+char e[9];
 
-char e[10];
+int eh[9];
 
-int eh[10];
+char f[9];
 
-char f[10];
+int fh[9];
 
-int fh[10];
+char g[9];
 
-char g[10];
+int gh[9];
 
-int gh[10];
+char h[9];
 
-char h[10];
+int hh[9];
 
-int hh[10];
+char i[9];
 
-char i[10];
+int ih[9];
 
-int ih[10];
+char j[9];
 
-char j[10];
-
-int jh[10];
-
+int jh[9];
 
 
-char a2[10];
 
-int ah2[10];
+char a2[9];
 
-char b2[10];
+int ah2[9];
 
-int bh2[10];
+char b2[9];
 
-char c2[10];
+int bh2[9];
 
-int ch2[10];
+char c2[9];
 
-char d2[10];
+int ch2[9];
 
-int dh2[10];
+char d2[9];
 
-char e2[10];
+int dh2[9];
 
-int eh2[10];
+char e2[9];
 
-char f2[10];
+int eh2[9];
 
-int fh2[10];
+char f2[9];
 
-char g2[10];
+int fh2[9];
 
-int gh2[10];
+char g2[9];
 
-char h2[10];
+int gh2[9];
 
-int hh2[10];
+char h2[9];
 
-char i2[10];
+int hh2[9];
 
-int ih2[10];
+char i2[9];
 
-char j2[10];
+int ih2[9];
 
-int jh2[10];
+char j2[9];
 
+int jh2[9];
 
 
 
@@ -678,6 +676,8 @@ void print_screen(char input_char, int input_int)//will be 5 spaces in between e
 
   printf("\n   *************************ENEMY SHIPS*************************\n");
 
+printf("      1     2     3     4     5     6     7     8     9     10\n");
+
  printf("     ___________________________________________________________\n");
 
   printf("A  |%c%c%c%c%c|%c%c%c%c%c|%c%c%c%c%c|%c%c%c%c%c|%c%c%c%c%c|%c%c%c%c%c|%c%c%c%c%c|%c%c%c%c%c|%c%c%c%c%c|%c%c%c%c%c|\n", a2[0], a2[0], a2[0], a2[0], a2[0], a2[1], a2[1], a2[1], a2[1], a2[1], a2[2], a2[2], a2[2], a2[2], a2[2], a2[3], a2[3], a2[3], a2[3], a2[3], a2[4], a2[4], a2[4], a2[4], a2[4], a2[5], a2[5], a2[5], a2[5], a2[5], a2[6], a2[6], a2[6], a2[6], a2[6], a2[7], a2[7], a2[7], a2[7], a2[7], a2[8], a2[8], a2[8], a2[8], a2[8], a2[9], a2[9], a2[9], a2[9], a2[9], a2[10], a2[10], a2[10], a2[10], a2[10]);
@@ -827,6 +827,337 @@ void change_space(char input_char, int input_int)
 }
 
 
+//THE GLITCH OF THIS FUNCTION IS THAT YOU CAN PLACE SHIPS ON TOP OF EACH OTHER. ENTERING THE SHIPS KINDA STINKS
+void place_ships()
+{
+  char char_beg;
+  char char_end;
+  int int_1;
+  int int_5;
+  int valid;
+  int difference;
+    do{
+        valid=0;
+  printf("Where would you like to place your carrier? (5 spaces) You may only place it horizontally or vertically.\n");
+  printf("Please enter it in form a5-a1 with the HIGHEST number first or the FIRST letter alphabetically first (ex:a1-e1)\n");
+  scanf("%c%d-%c%d", &char_beg, &int_1, &char_end, &int_5);
+  getchar();
+
+  printf("THIS WAS IT: %c%d-%c%d\n", char_beg, int_1, char_end, int_5);
+        int_1=int_1-1;
+        int_5=int_5-1;
+  difference = int_1-int_5;
+  printf("difference = %d\n", difference);
+ /* if(difference!=4||difference!=0||int_1>=10||int_5>=10)//THERE'S AN ERROR HERE BECAUSE IT WILL ALWAYS BE TRUE
+  {printf("This input is invalid, please try again."); */
+  valid=1;}
+ while(valid==0);
+
+  if (difference==0)
+  { printf("test\n");//HERE'S THE STINKIN ERROR
+      int int_2=int_1;
+   int int_3=int_1;
+   int int_4=int_1;
+     if (char_beg=='a')
+      ah[int_1], bh[int_2], ch[int_3], dh[int_4], eh[int_5]=1;
+    if (char_beg=='b')
+      bh[int_1], ch[int_2], dh[int_3], eh[int_4], fh[int_5]=1;
+    if (char_beg=='c')
+      ch[int_1], dh[int_2], eh[int_3], fh[int_4], gh[int_5]=1;
+    if (char_beg=='d')
+      dh[int_1], eh[int_2], fh[int_3], gh[int_4], hh[int_5]=1;
+    if (char_beg=='e')
+      eh[int_1], fh[int_2], gh[int_3], hh[int_4], ih[int_5]=1;
+    if (char_beg=='f')
+      fh[int_1], gh[int_2], hh[int_3], ih[int_4], jh[int_5]=1;
+    if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
+    printf("Invalid letter, restart program");
+  }
+  if (difference==4)
+  {int int_2=abs(int_1+1);
+   int int_3=int_2++;
+   int int_4=int_3++;
+  if (char_beg=='a')
+      ah[int_1], ah[int_2], ah[int_3], ah[int_4], ah[int_5]=1;
+    if (char_beg=='b')
+      bh[int_1], bh[int_2], bh[int_3], bh[int_4], bh[int_5]=1;
+    if (char_beg=='c')
+      ch[int_1], ch[int_2], ch[int_3], ch[int_4], ch[int_5]=1;
+    if (char_beg=='d')
+      dh[int_1], dh[int_2], dh[int_3], dh[int_4], dh[int_5]=1;
+    if (char_beg=='e')
+      eh[int_1], eh[int_2], eh[int_3], eh[int_4], eh[int_5]=1;
+    if (char_beg=='f')
+      fh[int_1], fh[int_2], fh[int_3], fh[int_4], fh[int_5]=1;
+    if (char_beg=='g')
+      gh[int_1], gh[int_2], gh[int_3], gh[int_4], gh[int_5]=1;
+    if (char_beg=='h')
+      hh[int_1], hh[int_2], hh[int_3], hh[int_4], hh[int_5]=1;
+    if (char_beg=='i')
+      ih[int_1], ih[int_2], ih[int_3], ih[int_4], ih[int_5]=1;
+    if (char_beg=='j')
+      jh[int_1], jh[int_2], jh[int_3], jh[int_4], jh[int_5]=1;
+    if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
+    printf("Invalid letter, restart program");
+  }
+        do{
+        valid=0;
+  printf("Where would you like to place your battleship? (4 spaces) You may only place it horizontally or vertically.\n");
+  printf("Please enter it in form a4-a1 with the HIGHEST number first or the FIRST letter alphabetically first (ex:a1-d1)\n");
+  scanf("%c%d-%c%d", &char_beg, &int_1, &char_end, &int_5);
+    getchar();
+                    int_1=int_1-1;
+        int_5=int_5-1;
+  difference = int_1-int_5;
+    printf("THIS WAS IT: %c%d-%c%d\n", char_beg, int_1, char_end, int_5);
+/*  if(difference!=3||difference!=0||int_1>=10||int_5>=10)
+  {printf("This input is invalid, please try again.");*/
+  valid=1;}
+ while(valid!=1);
+  if (difference==0)
+  {int int_2=int_1;
+   int int_3=int_1;
+   int int_4=int_1;
+     if (char_beg=='a')
+      ah[int_1], bh[int_2], ch[int_3], dh[int_4]=1;
+    if (char_beg=='b')
+      bh[int_1], ch[int_2], dh[int_3], eh[int_4]=1;
+    if (char_beg=='c')
+      ch[int_1], dh[int_2], eh[int_3], fh[int_4]=1;
+    if (char_beg=='d')
+      dh[int_1], eh[int_2], fh[int_3], gh[int_4]=1;
+    if (char_beg=='e')
+      eh[int_1], fh[int_2], gh[int_3], hh[int_4]=1;
+    if (char_beg=='f')
+      fh[int_1], gh[int_2], hh[int_3], ih[int_4]=1;
+    if (char_beg=='g')
+      gh[int_1], hh[int_2], ih[int_3], jh[int_4]=1;
+    if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
+    printf("Invalid letter, restart program");
+  }
+  if (difference==3)
+  {int int_2=abs(int_1+1);
+   int int_3=int_2++;
+   int int_4=int_3++;
+  if (char_beg=='a')
+      ah[int_1], ah[int_2], ah[int_3], ah[int_4]=1;
+    if (char_beg=='b')
+      bh[int_1], bh[int_2], bh[int_3], bh[int_4]=1;
+    if (char_beg=='c')
+      ch[int_1], ch[int_2], ch[int_3], ch[int_4]=1;
+    if (char_beg=='d')
+      dh[int_1], dh[int_2], dh[int_3], dh[int_4]=1;
+    if (char_beg=='e')
+      eh[int_1], eh[int_2], eh[int_3], eh[int_4]=1;
+    if (char_beg=='f')
+      fh[int_1], fh[int_2], fh[int_3], fh[int_4]=1;
+    if (char_beg=='g')
+      gh[int_1], gh[int_2], gh[int_3], gh[int_4]=1;
+    if (char_beg=='h')
+      hh[int_1], hh[int_2], hh[int_3], hh[int_4]=1;
+    if (char_beg=='i')
+      ih[int_1], ih[int_2], ih[int_3], ih[int_4]=1;
+    if (char_beg=='j')
+      jh[int_1], jh[int_2], jh[int_3], jh[int_4]=1;
+    if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
+    printf("Invalid letter, restart program");
+  }
+        do{
+        valid=0;
+  printf("Where would you like to place your submarine? (3 spaces) You may only place it horizontally or vertically.\n");
+  printf("Please enter it in form a3-a1 with the HIGHEST number first or the FIRST letter alphabetically first (ex:a1-c1)\n");
+  scanf("%c%d-%c%d", &char_beg, &int_1, &char_end, &int_5);
+    getchar();
+                    int_1=int_1-1;
+        int_5=int_5-1;
+  difference = int_1-int_5;
+    printf("THIS WAS IT: %c%d-%c%d\n", char_beg, int_1, char_end, int_5);
+/*  if(difference!=3||difference!=0||int_1>=10||int_5>=10)
+  {printf("This input is invalid, please try again.");*/
+  valid=1;}
+    while(valid!=1);
+  if (difference==0)
+  {int int_2=int_1;
+   int int_3=int_1;
+   int int_4=int_1;
+     if (char_beg=='a')
+      ah[int_1], bh[int_2], ch[int_3]=1;
+    if (char_beg=='b')
+      bh[int_1], ch[int_2], dh[int_3]=1;
+    if (char_beg=='c')
+      ch[int_1], dh[int_2], eh[int_3]=1;
+    if (char_beg=='d')
+      dh[int_1], eh[int_2], fh[int_3]=1;
+    if (char_beg=='e')
+      eh[int_1], fh[int_2], gh[int_3]=1;
+    if (char_beg=='f')
+      fh[int_1], gh[int_2], hh[int_3]=1;
+    if (char_beg=='g')
+      gh[int_1], hh[int_2], ih[int_3]=1;
+    if (char_beg=='h')
+      hh[int_1], ih[int_2], jh[int_3]=1;
+    if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
+    printf("Invalid letter, restart program");
+  }
+  if (difference==2)
+  {int int_2=abs(int_1+1);
+   int int_3=int_2++;
+   int int_4=int_3++;
+  if (char_beg=='a')
+      ah[int_1], ah[int_2], ah[int_3]=1;
+    if (char_beg=='b')
+      bh[int_1], bh[int_2], bh[int_3]=1;
+    if (char_beg=='c')
+      ch[int_1], ch[int_2], ch[int_3]=1;
+    if (char_beg=='d')
+      dh[int_1], dh[int_2], dh[int_3]=1;
+    if (char_beg=='e')
+      eh[int_1], eh[int_2], eh[int_3]=1;
+    if (char_beg=='f')
+      fh[int_1], fh[int_2], fh[int_3]=1;
+    if (char_beg=='g')
+      gh[int_1], gh[int_2], gh[int_3]=1;
+    if (char_beg=='h')
+      hh[int_1], hh[int_2], hh[int_3]=1;
+    if (char_beg=='i')
+      ih[int_1], ih[int_2], ih[int_3]=1;
+    if (char_beg=='j')
+      jh[int_1], jh[int_2], jh[int_3]=1;
+    if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
+    printf("Invalid letter, restart program");
+  }
+         do{
+        valid=0;
+  printf("Where would you like to place your cruiser? (3 spaces) You may only place it horizontally or vertically.\n");
+  printf("Please enter it in form a3-a1 with the HIGHEST number first or the FIRST letter alphabetically first (ex:a1-c1)\n");
+  scanf("%c%d-%c%d", &char_beg, &int_1, &char_end, &int_5);
+    getchar();
+                     int_1=int_1-1;
+        int_5=int_5-1;
+  difference = int_1-int_5;
+    printf("THIS WAS IT: %c%d-%c%d\n", char_beg, int_1, char_end, int_5);
+/*  if(difference!=3||difference!=0||int_1>=10||int_5>=10)
+  {printf("This input is invalid, please try again.");*/
+  valid=1;}
+    while(valid!=1);
+  if (difference==0)
+  {int int_2=int_1;
+   int int_3=int_1;
+   int int_4=int_1;
+     if (char_beg=='a')
+      ah[int_1], bh[int_2], ch[int_3]=1;
+    if (char_beg=='b')
+      bh[int_1], ch[int_2], dh[int_3]=1;
+    if (char_beg=='c')
+      ch[int_1], dh[int_2], eh[int_3]=1;
+    if (char_beg=='d')
+      dh[int_1], eh[int_2], fh[int_3]=1;
+    if (char_beg=='e')
+      eh[int_1], fh[int_2], gh[int_3]=1;
+    if (char_beg=='f')
+      fh[int_1], gh[int_2], hh[int_3]=1;
+    if (char_beg=='g')
+      gh[int_1], hh[int_2], ih[int_3]=1;
+    if (char_beg=='h')
+      hh[int_1], ih[int_2], jh[int_3]=1;
+    if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
+    printf("Invalid letter, restart program");
+  }
+  if (difference==2)
+  {int int_2=abs(int_1+1);
+   int int_3=int_2++;
+   int int_4=int_3++;
+  if (char_beg=='a')
+      ah[int_1], ah[int_2], ah[int_3]=1;
+    if (char_beg=='b')
+      bh[int_1], bh[int_2], bh[int_3]=1;
+    if (char_beg=='c')
+      ch[int_1], ch[int_2], ch[int_3]=1;
+    if (char_beg=='d')
+      dh[int_1], dh[int_2], dh[int_3]=1;
+    if (char_beg=='e')
+      eh[int_1], eh[int_2], eh[int_3]=1;
+    if (char_beg=='f')
+      fh[int_1], fh[int_2], fh[int_3]=1;
+    if (char_beg=='g')
+      gh[int_1], gh[int_2], gh[int_3]=1;
+    if (char_beg=='h')
+      hh[int_1], hh[int_2], hh[int_3]=1;
+    if (char_beg=='i')
+      ih[int_1], ih[int_2], ih[int_3]=1;
+    if (char_beg=='j')
+      jh[int_1], jh[int_2], jh[int_3]=1;
+    if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
+    printf("Invalid letter, restart program");
+  }
+         do{ printf("test\n");
+        valid=0;
+  printf("Where would you like to place your destroyer? (2 spaces) You may only place it horizontally or vertically.\n");
+  printf("Please enter it in form a2-a1 with the HIGHEST number first or the FIRST letter alphabetically first (ex:a1-b1)\n");
+  scanf("%c%d-%c%d", &char_beg, &int_1, &char_end, &int_5);
+    getchar();
+          int_1=int_1-1;
+        int_5=int_5-1;
+  difference = int_1-int_5;
+    printf("THIS WAS IT: %c%d-%c%d\n", char_beg, int_1, char_end, int_5);
+/*  if(difference!=3||difference!=0||int_1>=10||int_5>=10)
+  {printf("This input is invalid, please try again.");*/
+  valid=1;}
+    while(valid!=1);
+  if (difference==0)
+  {int int_2=int_1;
+   int int_3=int_1;
+   int int_4=int_1;
+     if (char_beg=='a')
+      ah[int_1], bh[int_2]=1;
+    if (char_beg=='b')
+      bh[int_1], ch[int_2]=1;
+    if (char_beg=='c')
+      ch[int_1], dh[int_2]=1;
+    if (char_beg=='d')
+      dh[int_1], eh[int_2]=1;
+    if (char_beg=='e')
+      eh[int_1], fh[int_2]=1;
+    if (char_beg=='f')
+      fh[int_1], gh[int_2]=1;
+    if (char_beg=='g')
+      gh[int_1], hh[int_2]=1;
+    if (char_beg=='h')
+      hh[int_1], ih[int_2]=1;
+    if (char_beg=='i')
+      ih[int_1], jh[int_2]=1;
+    if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
+    printf("Invalid letter, restart program");
+  }
+  if (difference==1)
+  {int int_2=abs(int_1+1);
+   int int_3=int_2++;
+   int int_4=int_3++;
+  if (char_beg=='a')
+      ah[int_1], ah[int_2]=1;
+    if (char_beg=='b')
+      bh[int_1], bh[int_2]=1;
+    if (char_beg=='c')
+      ch[int_1], ch[int_2]=1;
+    if (char_beg=='d')
+      dh[int_1], dh[int_2]=1;
+    if (char_beg=='e')
+      eh[int_1], eh[int_2]=1;
+    if (char_beg=='f')
+      fh[int_1], fh[int_2]=1;
+    if (char_beg=='g')
+      gh[int_1], gh[int_2]=1;
+    if (char_beg=='h')
+      hh[int_1], hh[int_2]=1;
+    if (char_beg=='i')
+      ih[int_1], ih[int_2]=1;
+    if (char_beg=='j')
+      jh[int_1], jh[int_2]=1;
+    if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
+    printf("Invalid letter, restart program");
+  }
+}//end of function place_ships
+
 
 int main()
 
@@ -839,6 +1170,8 @@ char input_char;
 initialize_arrays();
 
 print_screen(input_char, input_int);
+
+place_ships();
 
 printf("Input the row of letters that you'd like to chance to 'x'");
 
