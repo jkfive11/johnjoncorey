@@ -1,6 +1,7 @@
+
 //BattleShip
 
-//Jonathan Keller
+//Jonathan Keller, Corey Hupper, and John Lowery
 
 
 
