@@ -600,7 +600,7 @@ counter=0;
 
 
 
-void print_screen(char input_char, int input_int)//will be 5 spaces in between each vertical line filled with the
+void print_screen()//will be 5 spaces in between each vertical line filled with the
 
 {
 
@@ -843,18 +843,16 @@ void place_ships()
   scanf("%c%d-%c%d", &char_beg, &int_1, &char_end, &int_5);
   getchar();
 
-  printf("THIS WAS IT: %c%d-%c%d\n", char_beg, int_1, char_end, int_5);
         int_1=int_1-1;
         int_5=int_5-1;
   difference = int_1-int_5;
-  printf("difference = %d\n", difference);
  /* if(difference!=4||difference!=0||int_1>=10||int_5>=10)//THERE'S AN ERROR HERE BECAUSE IT WILL ALWAYS BE TRUE
   {printf("This input is invalid, please try again."); */
   valid=1;}
  while(valid==0);
 
   if (difference==0)
-  { printf("test\n");//HERE'S THE STINKIN ERROR
+  {
       int int_2=int_1;
    int int_3=int_1;
    int int_4=int_1;
@@ -871,10 +869,11 @@ void place_ships()
     if (char_beg=='f')
       fh[int_1], gh[int_2], hh[int_3], ih[int_4], jh[int_5]=1;
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
-    printf("Invalid letter, restart program");
+    printf("Invalid letter, restart program\n");
   }
   if (difference==4)
-  {int int_2=abs(int_1+1);
+{
+  int int_2=abs(int_1+1);
    int int_3=int_2++;
    int int_4=int_3++;
   if (char_beg=='a')
@@ -898,8 +897,10 @@ void place_ships()
     if (char_beg=='j')
       jh[int_1], jh[int_2], jh[int_3], jh[int_4], jh[int_5]=1;
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
-    printf("Invalid letter, restart program");
+    printf("Invalid letter, restart program\n");
   }
+  if(difference!=0&&difference!=4)
+    printf("Invalid Range, restart program\n");
         do{
         valid=0;
   printf("Where would you like to place your battleship? (4 spaces) You may only place it horizontally or vertically.\n");
@@ -909,7 +910,6 @@ void place_ships()
                     int_1=int_1-1;
         int_5=int_5-1;
   difference = int_1-int_5;
-    printf("THIS WAS IT: %c%d-%c%d\n", char_beg, int_1, char_end, int_5);
 /*  if(difference!=3||difference!=0||int_1>=10||int_5>=10)
   {printf("This input is invalid, please try again.");*/
   valid=1;}
@@ -933,7 +933,7 @@ void place_ships()
     if (char_beg=='g')
       gh[int_1], hh[int_2], ih[int_3], jh[int_4]=1;
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
-    printf("Invalid letter, restart program");
+    printf("Invalid letter, restart program\n");
   }
   if (difference==3)
   {int int_2=abs(int_1+1);
@@ -960,8 +960,10 @@ void place_ships()
     if (char_beg=='j')
       jh[int_1], jh[int_2], jh[int_3], jh[int_4]=1;
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
-    printf("Invalid letter, restart program");
+    printf("Invalid letter, restart program\n");
   }
+    if(difference!=0&&difference!=3)
+    printf("Invalid Range, restart program\n");
         do{
         valid=0;
   printf("Where would you like to place your submarine? (3 spaces) You may only place it horizontally or vertically.\n");
@@ -971,7 +973,6 @@ void place_ships()
                     int_1=int_1-1;
         int_5=int_5-1;
   difference = int_1-int_5;
-    printf("THIS WAS IT: %c%d-%c%d\n", char_beg, int_1, char_end, int_5);
 /*  if(difference!=3||difference!=0||int_1>=10||int_5>=10)
   {printf("This input is invalid, please try again.");*/
   valid=1;}
@@ -997,7 +998,7 @@ void place_ships()
     if (char_beg=='h')
       hh[int_1], ih[int_2], jh[int_3]=1;
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
-    printf("Invalid letter, restart program");
+    printf("Invalid letter, restart program\n");
   }
   if (difference==2)
   {int int_2=abs(int_1+1);
@@ -1024,8 +1025,10 @@ void place_ships()
     if (char_beg=='j')
       jh[int_1], jh[int_2], jh[int_3]=1;
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
-    printf("Invalid letter, restart program");
+    printf("Invalid letter, restart program\n");
   }
+    if(difference!=0&&difference!=2)
+    printf("Invalid Range, restart program\n");
          do{
         valid=0;
   printf("Where would you like to place your cruiser? (3 spaces) You may only place it horizontally or vertically.\n");
@@ -1035,7 +1038,6 @@ void place_ships()
                      int_1=int_1-1;
         int_5=int_5-1;
   difference = int_1-int_5;
-    printf("THIS WAS IT: %c%d-%c%d\n", char_beg, int_1, char_end, int_5);
 /*  if(difference!=3||difference!=0||int_1>=10||int_5>=10)
   {printf("This input is invalid, please try again.");*/
   valid=1;}
@@ -1061,7 +1063,7 @@ void place_ships()
     if (char_beg=='h')
       hh[int_1], ih[int_2], jh[int_3]=1;
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
-    printf("Invalid letter, restart program");
+    printf("Invalid letter, restart program\n");
   }
   if (difference==2)
   {int int_2=abs(int_1+1);
@@ -1088,9 +1090,11 @@ void place_ships()
     if (char_beg=='j')
       jh[int_1], jh[int_2], jh[int_3]=1;
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
-    printf("Invalid letter, restart program");
+    printf("Invalid letter, restart program\n");
   }
-         do{ printf("test\n");
+    if(difference!=0&&difference!=2)
+    printf("Invalid Range, restart program\n");
+         do{
         valid=0;
   printf("Where would you like to place your destroyer? (2 spaces) You may only place it horizontally or vertically.\n");
   printf("Please enter it in form a2-a1 with the HIGHEST number first or the FIRST letter alphabetically first (ex:a1-b1)\n");
@@ -1099,7 +1103,6 @@ void place_ships()
           int_1=int_1-1;
         int_5=int_5-1;
   difference = int_1-int_5;
-    printf("THIS WAS IT: %c%d-%c%d\n", char_beg, int_1, char_end, int_5);
 /*  if(difference!=3||difference!=0||int_1>=10||int_5>=10)
   {printf("This input is invalid, please try again.");*/
   valid=1;}
@@ -1127,7 +1130,7 @@ void place_ships()
     if (char_beg=='i')
       ih[int_1], jh[int_2]=1;
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
-    printf("Invalid letter, restart program");
+    printf("Invalid letter, restart program\n");
   }
   if (difference==1)
   {int int_2=abs(int_1+1);
@@ -1154,10 +1157,11 @@ void place_ships()
     if (char_beg=='j')
       jh[int_1], jh[int_2]=1;
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
-    printf("Invalid letter, restart program");
+    printf("Invalid letter, restart program\n");
   }
+    if(difference!=0&&difference!=1)
+    printf("Invalid Range, restart program\n");
 }//end of function place_ships
-
 
 int main()
 
@@ -1185,7 +1189,7 @@ input_int=input_int-1;//BECAUSE OF ARRAYS
 
 change_space(input_char, input_int);
 
-print_screen(input_char, input_int);
+print_screen();
 
 
 
