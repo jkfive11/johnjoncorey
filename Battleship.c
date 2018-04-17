@@ -834,6 +834,9 @@ void place_ships()
   char char_beg;
   char char_end;
   int int_1;
+  int int_2;
+  int int_3;
+  int int_4;
   int int_5;
   int valid;
   int difference;
@@ -858,48 +861,50 @@ void place_ships()
    int int_3=int_1;
    int int_4=int_1;
      if (char_beg=='a')
-      ah[int_1], bh[int_2], ch[int_3], dh[int_4], eh[int_5]=1;
+      {ah[int_1]=1, bh[int_2]=1, ch[int_3]=1, dh[int_4]=1, eh[int_5]=1;}
     if (char_beg=='b')
-      bh[int_1], ch[int_2], dh[int_3], eh[int_4], fh[int_5]=1;
+      {bh[int_1]=1, ch[int_2]=1, dh[int_3]=1, eh[int_4]=1, fh[int_5]=1;}
     if (char_beg=='c')
-      ch[int_1], dh[int_2], eh[int_3], fh[int_4], gh[int_5]=1;
+      {ch[int_1]=1, dh[int_2]=1, eh[int_3]=1, fh[int_4]=1, gh[int_5]=1;}
     if (char_beg=='d')
-      dh[int_1], eh[int_2], fh[int_3], gh[int_4], hh[int_5]=1;
+      {dh[int_1]=1, eh[int_2]=1, fh[int_3]=1, gh[int_4]=1, hh[int_5]=1;}
     if (char_beg=='e')
-      eh[int_1], fh[int_2], gh[int_3], hh[int_4], ih[int_5]=1;
+      {eh[int_1]=1, fh[int_2]=1, gh[int_3]=1, hh[int_4]=1, ih[int_5]=1;}
     if (char_beg=='f')
-      fh[int_1], gh[int_2], hh[int_3], ih[int_4], jh[int_5]=1;
+      {fh[int_1]=1, gh[int_2]=1, hh[int_3]=1, ih[int_4]=1, jh[int_5]=1;}
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
     printf("Invalid letter, restart program\n");
   }
   if (difference==4)
 {
-  int int_2=abs(int_1+1);
-   int int_3=int_2++;
-   int int_4=int_3++;
+  int int_2=int_1-1;
+   int int_3=int_2-1;
+   int int_4=int_3-1;
   if (char_beg=='a')
-      ah[int_1], ah[int_2], ah[int_3], ah[int_4], ah[int_5]=1;
+      {ah[int_1]=1, ah[int_2]=1, ah[int_3]=1, ah[int_4]=1, ah[int_5]=1;}
     if (char_beg=='b')
-      bh[int_1], bh[int_2], bh[int_3], bh[int_4], bh[int_5]=1;
+      {bh[int_1]=1, bh[int_2]=1, bh[int_3]=1, bh[int_4]=1, bh[int_5]=1;}
     if (char_beg=='c')
-      ch[int_1], ch[int_2], ch[int_3], ch[int_4], ch[int_5]=1;
+      {ch[int_1]=1, ch[int_2]=1, ch[int_3]=1, ch[int_4]=1, ch[int_5]=1;}
     if (char_beg=='d')
-      dh[int_1], dh[int_2], dh[int_3], dh[int_4], dh[int_5]=1;
+      {dh[int_1]=1, dh[int_2]=1, dh[int_3]=1, dh[int_4]=1, dh[int_5]=1;}
     if (char_beg=='e')
-      eh[int_1], eh[int_2], eh[int_3], eh[int_4], eh[int_5]=1;
+      {eh[int_1]=1, eh[int_2]=1, eh[int_3]=1, eh[int_4]=1, eh[int_5]=1;}
     if (char_beg=='f')
-      fh[int_1], fh[int_2], fh[int_3], fh[int_4], fh[int_5]=1;
+      {fh[int_1]=1, fh[int_2]=1, fh[int_3]=1, fh[int_4]=1, fh[int_5]=1;}
     if (char_beg=='g')
-      gh[int_1], gh[int_2], gh[int_3], gh[int_4], gh[int_5]=1;
+      {gh[int_1]=1, gh[int_2]=1, gh[int_3]=1, gh[int_4]=1, gh[int_5]=1;}
     if (char_beg=='h')
-      hh[int_1], hh[int_2], hh[int_3], hh[int_4], hh[int_5]=1;
+      {hh[int_1]=1, hh[int_2]=1, hh[int_3]=1, hh[int_4]=1, hh[int_5]=1;}
     if (char_beg=='i')
-      ih[int_1], ih[int_2], ih[int_3], ih[int_4], ih[int_5]=1;
+      {ih[int_1]=1, ih[int_2]=1, ih[int_3]=1, ih[int_4]=1, ih[int_5]=1;}
     if (char_beg=='j')
-      jh[int_1], jh[int_2], jh[int_3], jh[int_4], jh[int_5]=1;
+      {jh[int_1]=1, jh[int_2]=1, jh[int_3]=1, jh[int_4]=1, jh[int_5]=1;}
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
     printf("Invalid letter, restart program\n");
   }
+
+
   if(difference!=0&&difference!=4)
     printf("Invalid Range, restart program\n");
         do{
@@ -920,46 +925,46 @@ void place_ships()
    int int_3=int_1;
    int int_4=int_1;
      if (char_beg=='a')
-      ah[int_1], bh[int_2], ch[int_3], dh[int_4]=1;
+      ah[int_1]=1, bh[int_2]=1, ch[int_3]=1, dh[int_4]=1;
     if (char_beg=='b')
-      bh[int_1], ch[int_2], dh[int_3], eh[int_4]=1;
+      bh[int_1]=1, ch[int_2]=1, dh[int_3]=1, eh[int_4]=1;
     if (char_beg=='c')
-      ch[int_1], dh[int_2], eh[int_3], fh[int_4]=1;
+      ch[int_1]=1, dh[int_2]=1, eh[int_3]=1, fh[int_4]=1;
     if (char_beg=='d')
-      dh[int_1], eh[int_2], fh[int_3], gh[int_4]=1;
+      dh[int_1]=1, eh[int_2]=1, fh[int_3]=1, gh[int_4]=1;
     if (char_beg=='e')
-      eh[int_1], fh[int_2], gh[int_3], hh[int_4]=1;
+      eh[int_1]=1, fh[int_2]=1, gh[int_3]=1, hh[int_4]=1;
     if (char_beg=='f')
-      fh[int_1], gh[int_2], hh[int_3], ih[int_4]=1;
+      fh[int_1]=1, gh[int_2]=1, hh[int_3]=1, ih[int_4]=1;
     if (char_beg=='g')
-      gh[int_1], hh[int_2], ih[int_3], jh[int_4]=1;
+      gh[int_1]=1, hh[int_2]=1, ih[int_3]=1, jh[int_4]=1;
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
     printf("Invalid letter, restart program\n");
   }
   if (difference==3)
-  {int int_2=abs(int_1+1);
-   int int_3=int_2++;
-   int int_4=int_3++;
+  {int int_2=int_1-1;
+   int int_3=int_2-1;
+   int int_4=int_3-1;
   if (char_beg=='a')
-      ah[int_1], ah[int_2], ah[int_3], ah[int_4]=1;
+      ah[int_1]=1, ah[int_2]=1, ah[int_3]=1, ah[int_4]=1;
     if (char_beg=='b')
-      bh[int_1], bh[int_2], bh[int_3], bh[int_4]=1;
+      bh[int_1]=1, bh[int_2]=1, bh[int_3]=1, bh[int_4]=1;
     if (char_beg=='c')
-      ch[int_1], ch[int_2], ch[int_3], ch[int_4]=1;
+      ch[int_1]=1, ch[int_2]=1, ch[int_3]=1, ch[int_4]=1;
     if (char_beg=='d')
-      dh[int_1], dh[int_2], dh[int_3], dh[int_4]=1;
+      dh[int_1]=1, dh[int_2]=1, dh[int_3]=1, dh[int_4]=1;
     if (char_beg=='e')
-      eh[int_1], eh[int_2], eh[int_3], eh[int_4]=1;
+      eh[int_1]=1, eh[int_2]=1, eh[int_3]=1, eh[int_4]=1;
     if (char_beg=='f')
-      fh[int_1], fh[int_2], fh[int_3], fh[int_4]=1;
+      fh[int_1]=1, fh[int_2]=1, fh[int_3]=1, fh[int_4]=1;
     if (char_beg=='g')
-      gh[int_1], gh[int_2], gh[int_3], gh[int_4]=1;
+      gh[int_1]=1, gh[int_2]=1, gh[int_3]=1, gh[int_4]=1;
     if (char_beg=='h')
-      hh[int_1], hh[int_2], hh[int_3], hh[int_4]=1;
+      hh[int_1]=1, hh[int_2]=1, hh[int_3]=1, hh[int_4]=1;
     if (char_beg=='i')
-      ih[int_1], ih[int_2], ih[int_3], ih[int_4]=1;
+      ih[int_1]=1, ih[int_2]=1, ih[int_3]=1, ih[int_4]=1;
     if (char_beg=='j')
-      jh[int_1], jh[int_2], jh[int_3], jh[int_4]=1;
+      jh[int_1]=1, jh[int_2]=1, jh[int_3]=1, jh[int_4]=1;
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
     printf("Invalid letter, restart program\n");
   }
@@ -983,48 +988,48 @@ void place_ships()
    int int_3=int_1;
    int int_4=int_1;
      if (char_beg=='a')
-      ah[int_1], bh[int_2], ch[int_3]=1;
+      ah[int_1]=1, bh[int_2]=1, ch[int_3]=1;
     if (char_beg=='b')
-      bh[int_1], ch[int_2], dh[int_3]=1;
+      bh[int_1]=1, ch[int_2]=1, dh[int_3]=1;
     if (char_beg=='c')
-      ch[int_1], dh[int_2], eh[int_3]=1;
+      ch[int_1]=1, dh[int_2]=1, eh[int_3]=1;
     if (char_beg=='d')
-      dh[int_1], eh[int_2], fh[int_3]=1;
+      dh[int_1]=1, eh[int_2]=1, fh[int_3]=1;
     if (char_beg=='e')
-      eh[int_1], fh[int_2], gh[int_3]=1;
+      eh[int_1]=1, fh[int_2]=1, gh[int_3]=1;
     if (char_beg=='f')
-      fh[int_1], gh[int_2], hh[int_3]=1;
+      fh[int_1]=1, gh[int_2]=1, hh[int_3]=1;
     if (char_beg=='g')
-      gh[int_1], hh[int_2], ih[int_3]=1;
+      gh[int_1]=1, hh[int_2]=1, ih[int_3]=1;
     if (char_beg=='h')
-      hh[int_1], ih[int_2], jh[int_3]=1;
+      hh[int_1]=1, ih[int_2]=1, jh[int_3]=1;
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
     printf("Invalid letter, restart program\n");
   }
   if (difference==2)
-  {int int_2=abs(int_1+1);
-   int int_3=int_2++;
-   int int_4=int_3++;
+  {int int_2=int_1-1;
+   int int_3=int_2-1;
+   int int_4=int_3-1;
   if (char_beg=='a')
-      ah[int_1], ah[int_2], ah[int_3]=1;
+      ah[int_1]=1, ah[int_2]=1, ah[int_3]=1;
     if (char_beg=='b')
-      bh[int_1], bh[int_2], bh[int_3]=1;
+      bh[int_1]=1, bh[int_2]=1, bh[int_3]=1;
     if (char_beg=='c')
-      ch[int_1], ch[int_2], ch[int_3]=1;
+      ch[int_1]=1, ch[int_2]=1, ch[int_3]=1;
     if (char_beg=='d')
-      dh[int_1], dh[int_2], dh[int_3]=1;
+      dh[int_1]=1, dh[int_2]=1, dh[int_3]=1;
     if (char_beg=='e')
-      eh[int_1], eh[int_2], eh[int_3]=1;
+      eh[int_1]=1, eh[int_2]=1, eh[int_3]=1;
     if (char_beg=='f')
-      fh[int_1], fh[int_2], fh[int_3]=1;
+      fh[int_1]=1, fh[int_2]=1, fh[int_3]=1;
     if (char_beg=='g')
-      gh[int_1], gh[int_2], gh[int_3]=1;
+      gh[int_1]=1, gh[int_2]=1, gh[int_3]=1;
     if (char_beg=='h')
-      hh[int_1], hh[int_2], hh[int_3]=1;
+      hh[int_1]=1, hh[int_2]=1, hh[int_3]=1;
     if (char_beg=='i')
-      ih[int_1], ih[int_2], ih[int_3]=1;
+      ih[int_1]=1, ih[int_2]=1, ih[int_3]=1;
     if (char_beg=='j')
-      jh[int_1], jh[int_2], jh[int_3]=1;
+      jh[int_1]=1, jh[int_2]=1, jh[int_3]=1;
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
     printf("Invalid letter, restart program\n");
   }
@@ -1048,53 +1053,54 @@ void place_ships()
    int int_3=int_1;
    int int_4=int_1;
      if (char_beg=='a')
-      ah[int_1], bh[int_2], ch[int_3]=1;
+      ah[int_1]=1, bh[int_2]=1, ch[int_3]=1;
     if (char_beg=='b')
-      bh[int_1], ch[int_2], dh[int_3]=1;
+      bh[int_1]=1, ch[int_2]=1, dh[int_3]=1;
     if (char_beg=='c')
-      ch[int_1], dh[int_2], eh[int_3]=1;
+      ch[int_1]=1, dh[int_2]=1, eh[int_3]=1;
     if (char_beg=='d')
-      dh[int_1], eh[int_2], fh[int_3]=1;
+      dh[int_1]=1, eh[int_2]=1, fh[int_3]=1;
     if (char_beg=='e')
-      eh[int_1], fh[int_2], gh[int_3]=1;
+      eh[int_1]=1, fh[int_2]=1, gh[int_3]=1;
     if (char_beg=='f')
-      fh[int_1], gh[int_2], hh[int_3]=1;
+      fh[int_1]=1, gh[int_2]=1, hh[int_3]=1;
     if (char_beg=='g')
-      gh[int_1], hh[int_2], ih[int_3]=1;
+      gh[int_1]=1, hh[int_2]=1, ih[int_3]=1;
     if (char_beg=='h')
-      hh[int_1], ih[int_2], jh[int_3]=1;
+      hh[int_1]=1, ih[int_2]=1, jh[int_3]=1;
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
     printf("Invalid letter, restart program\n");
   }
   if (difference==2)
-  {int int_2=abs(int_1+1);
-   int int_3=int_2++;
-   int int_4=int_3++;
+  {int int_2=int_1-1;
+   int int_3=int_2-1;
+   int int_4=int_3-1;
   if (char_beg=='a')
-      ah[int_1], ah[int_2], ah[int_3]=1;
+      ah[int_1]=1, ah[int_2]=1, ah[int_3]=1;
     if (char_beg=='b')
-      bh[int_1], bh[int_2], bh[int_3]=1;
+      bh[int_1]=1, bh[int_2]=1, bh[int_3]=1;
     if (char_beg=='c')
-      ch[int_1], ch[int_2], ch[int_3]=1;
+      ch[int_1]=1, ch[int_2]=1, ch[int_3]=1;
     if (char_beg=='d')
-      dh[int_1], dh[int_2], dh[int_3]=1;
+      dh[int_1]=1, dh[int_2]=1, dh[int_3]=1;
     if (char_beg=='e')
-      eh[int_1], eh[int_2], eh[int_3]=1;
+      eh[int_1]=1, eh[int_2]=1, eh[int_3]=1;
     if (char_beg=='f')
-      fh[int_1], fh[int_2], fh[int_3]=1;
+      fh[int_1]=1, fh[int_2]=1, fh[int_3]=1;
     if (char_beg=='g')
-      gh[int_1], gh[int_2], gh[int_3]=1;
+      gh[int_1]=1, gh[int_2]=1, gh[int_3]=1;
     if (char_beg=='h')
-      hh[int_1], hh[int_2], hh[int_3]=1;
+      hh[int_1]=1, hh[int_2]=1, hh[int_3]=1;
     if (char_beg=='i')
-      ih[int_1], ih[int_2], ih[int_3]=1;
+      ih[int_1]=1, ih[int_2]=1, ih[int_3]=1;
     if (char_beg=='j')
-      jh[int_1], jh[int_2], jh[int_3]=1;
+      jh[int_1]=1, jh[int_2]=1, jh[int_3]=1;
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
     printf("Invalid letter, restart program\n");
   }
     if(difference!=0&&difference!=2)
     printf("Invalid Range, restart program\n");
+    
          do{
         valid=0;
   printf("Where would you like to place your destroyer? (2 spaces) You may only place it horizontally or vertically.\n");
@@ -1113,56 +1119,58 @@ void place_ships()
    int int_3=int_1;
    int int_4=int_1;
      if (char_beg=='a')
-      ah[int_1], bh[int_2]=1;
+      ah[int_1]=1, bh[int_2]=1;
     if (char_beg=='b')
-      bh[int_1], ch[int_2]=1;
+      bh[int_1]=1, ch[int_2]=1;
     if (char_beg=='c')
-      ch[int_1], dh[int_2]=1;
+      ch[int_1]=1, dh[int_2]=1;
     if (char_beg=='d')
-      dh[int_1], eh[int_2]=1;
+      dh[int_1]=1, eh[int_2]=1;
     if (char_beg=='e')
-      eh[int_1], fh[int_2]=1;
+      eh[int_1]=1, fh[int_2]=1;
     if (char_beg=='f')
-      fh[int_1], gh[int_2]=1;
+      fh[int_1]=1, gh[int_2]=1;
     if (char_beg=='g')
-      gh[int_1], hh[int_2]=1;
+      gh[int_1]=1, hh[int_2]=1;
     if (char_beg=='h')
-      hh[int_1], ih[int_2]=1;
+      hh[int_1]=1, ih[int_2]=1;
     if (char_beg=='i')
-      ih[int_1], jh[int_2]=1;
+      ih[int_1]=1, jh[int_2]=1;
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
     printf("Invalid letter, restart program\n");
   }
   if (difference==1)
-  {int int_2=abs(int_1+1);
-   int int_3=int_2++;
-   int int_4=int_3++;
+  {int int_2=abs(int_1-1);
+   int int_3=int_2-1;
+   int int_4=int_3-1;
   if (char_beg=='a')
-      ah[int_1], ah[int_2]=1;
+      ah[int_1]=1, ah[int_2]=1;
     if (char_beg=='b')
-      bh[int_1], bh[int_2]=1;
+      bh[int_1]=1, bh[int_2]=1;
     if (char_beg=='c')
-      ch[int_1], ch[int_2]=1;
+      ch[int_1]=1, ch[int_2]=1;
     if (char_beg=='d')
-      dh[int_1], dh[int_2]=1;
+      dh[int_1]=1, dh[int_2]=1;
     if (char_beg=='e')
-      eh[int_1], eh[int_2]=1;
+      eh[int_1]=1, eh[int_2]=1;
     if (char_beg=='f')
-      fh[int_1], fh[int_2]=1;
+      fh[int_1]=1, fh[int_2]=1;
     if (char_beg=='g')
-      gh[int_1], gh[int_2]=1;
+      gh[int_1]=1, gh[int_2]=1;
     if (char_beg=='h')
-      hh[int_1], hh[int_2]=1;
+      hh[int_1]=1, hh[int_2]=1;
     if (char_beg=='i')
-      ih[int_1], ih[int_2]=1;
+      ih[int_1]=1, ih[int_2]=1;
     if (char_beg=='j')
-      jh[int_1], jh[int_2]=1;
+      jh[int_1]=1, jh[int_2]=1;
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
     printf("Invalid letter, restart program\n");
   }
     if(difference!=0&&difference!=1)
     printf("Invalid Range, restart program\n");
 }//end of function place_ships
+
+
 
 int main()
 
