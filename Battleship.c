@@ -604,8 +604,9 @@ counter=0;
 void print_screen()//will be 5 spaces in between each vertical line filled with the
 
 {
+    system("cls");
 
-  printf("\n\n\n\n\n\n\n\n    *************************BATTLESHIP*************************\n");
+  printf("    *************************BATTLESHIP*************************\n");
 
   printf("\n    *************************YOUR SHIPS*************************\n");
 
