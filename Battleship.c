@@ -761,70 +761,45 @@ printf("      1     2     3     4     5     6     7     8     9     10\n");
 void change_space(char input_char, int input_int)
 
 {
-
-
-
   if (input_char=='a')
 
    a[input_int]='X';
-
-
 
     if (input_char=='b')
 
      b[input_int]='X';
 
-
-
     if (input_char=='c')
 
    c[input_int]='X';
-
-
 
     if (input_char=='d')
 
     d[input_int]='X';
 
-
-
     if (input_char=='e')
 
     e[input_int]='X';
-
-
 
     if (input_char=='f')
 
     f[input_int]='X';
 
-
-
     if (input_char=='g')
 
     g[input_int]='X';
-
-
 
     if (input_char=='h')
 
      h[input_int]='X';
 
-
-
     if (input_char=='i')
 
      i[input_int]='p';
 
-
-
     if (input_char=='j')
 
      j[input_int]='X';
-
-
-
-
 
 }
 
