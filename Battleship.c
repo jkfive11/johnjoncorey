@@ -1115,6 +1115,7 @@ void place_ships()
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
     printf("Invalid letter, restart program\n");
   }
+
   if (difference==1)
   {int int_2=abs(int_1-1);
    int int_3=int_2-1;
@@ -1145,6 +1146,262 @@ void place_ships()
     if(difference!=0&&difference!=1)
     printf("Invalid Range, restart program\n");
 }//end of function place_ships
+
+void place_enemy_ships()
+{
+
+   int randomnumber=rand()%100;
+   if (randomnumber>=0&&randomnumber<10)
+   {
+     ah2[2]=1;
+     bh2[2]=1;
+     ch2[2]=1;
+     dh2[2]=1;
+     eh2[2]=1;
+
+     fh2[5]=1;
+     fh2[6]=1;
+     fh2[7]=1;
+     fh2[8]=1;
+
+     hh2[1]=1;
+     hh2[2]=1;
+     hh2[3]=1;
+
+     ch2[6]=1;
+     dh2[6]=1;
+     eh2[6]=1;
+
+     dh2[3]=1;
+     dh2[4]=1;
+   }
+   if (randomnumber>=10&&randomnumber<20)
+   {
+     ah2[8]=1;
+     bh2[8]=1;
+     ch2[8]=1;
+     dh2[8]=1;
+     eh2[8]=1;
+
+     jh2[5]=1;
+     jh2[6]=1;
+     jh2[7]=1;
+     jh2[8]=1;
+
+     hh2[1]=1;
+     hh2[2]=1;
+     hh2[3]=1;
+
+     ch2[1]=1;
+     dh2[1]=1;
+     eh2[1]=1;
+
+     dh2[5]=1;
+     dh2[6]=1;
+   }
+
+   if (randomnumber>=20&&randomnumber<30)
+   {
+     dh2[4]=1;
+     eh2[4]=1;
+     fh2[4]=1;
+     gh2[4]=1;
+     hh2[4]=1;
+
+     ih2[5]=1;
+     ih2[6]=1;
+     ih2[7]=1;
+     ih2[8]=1;
+
+     ah2[9]=1;
+     bh2[9]=1;
+     ch2[9]=1;
+
+     eh2[1]=1;
+     fh2[1]=1;
+     gh2[1]=1;
+
+     dh2[0]=1;
+     ch2[0]=1;
+   }
+
+
+   if (randomnumber>=30&&randomnumber<40)
+   {
+     eh2[4]=1;
+     fh2[4]=1;
+     gh2[4]=1;
+     hh2[4]=1;
+     ih2[4]=1;
+
+     ih2[5]=1;
+     ih2[6]=1;
+     ih2[7]=1;
+     ih2[8]=1;
+
+     hh2[7]=1;
+     hh2[8]=1;
+     hh2[9]=1;
+
+     ch2[0]=1;
+     dh2[0]=1;
+     eh2[0]=1;
+
+     dh2[2]=1;
+     dh2[3]=1;
+
+   }
+
+   if (randomnumber>=40&&randomnumber<50)
+   {
+     jh2[0]=1;
+     fh2[0]=1;
+     gh2[0]=1;
+     hh2[0]=1;
+     ih2[0]=1;
+
+     ch2[5]=1;
+     ch2[6]=1;
+     ch2[7]=1;
+     ch2[8]=1;
+
+     bh2[7]=1;
+     bh2[8]=1;
+     bh2[9]=1;
+
+     gh2[7]=1;
+     hh2[7]=1;
+     ih2[7]=1;
+
+     jh2[8]=1;
+     jh2[9]=1;
+   }
+
+
+   if (randomnumber>=50&&randomnumber<60)
+   {
+     ah2[4]=1;
+     ah2[5]=1;
+     ah2[6]=1;
+     ah2[7]=1;
+     ah2[8]=1;
+
+     ch2[2]=1;
+     dh2[2]=1;
+     eh2[2]=1;
+     fh2[2]=1;
+
+     bh2[7]=1;
+     bh2[8]=1;
+     bh2[9]=1;
+
+     gh2[7]=1;
+     hh2[7]=1;
+     ih2[7]=1;
+
+     ah2[0]=1;
+     ah2[1]=1;
+   }
+
+   if (randomnumber>=60&&randomnumber<70)
+   {
+     eh2[4]=1;
+     eh2[5]=1;
+     eh2[6]=1;
+     eh2[7]=1;
+     eh2[8]=1;
+
+     ch2[3]=1;
+     dh2[3]=1;
+     eh2[3]=1;
+     fh2[3]=1;
+
+     dh2[7]=1;
+     dh2[8]=1;
+     dh2[9]=1;
+
+     gh2[7]=1;
+     hh2[7]=1;
+     ih2[7]=1;
+
+     jh2[0]=1;
+     jh2[1]=1;
+   }
+
+   if (randomnumber>=70&&randomnumber<80)
+   {
+     ih2[0]=1;
+     ih2[1]=1;
+     ih2[2]=1;
+     ih2[3]=1;
+     ih2[4]=1;
+
+     ch2[1]=1;
+     dh2[1]=1;
+     eh2[1]=1;
+     fh2[1]=1;
+
+     dh2[7]=1;
+     bh2[7]=1;
+     ch2[7]=1;
+
+     gh2[7]=1;
+     hh2[7]=1;
+     ih2[7]=1;
+
+     eh2[4]=1;
+     eh2[5]=1;
+   }
+   if (randomnumber>=80&&randomnumber<90)
+   {
+     ch2[1]=1;
+     ch2[2]=1;
+     ch2[3]=1;
+     ch2[4]=1;
+     ch2[5]=1;
+
+     gh2[3]=1;
+     hh2[3]=1;
+     ih2[3]=1;
+     jh2[3]=1;
+
+     ch2[7]=1;
+     ch2[8]=1;
+     ch2[9]=1;
+
+     bh2[6]=1;
+     ch2[6]=1;
+     dh2[6]=1;
+
+     gh2[1]=1;
+     hh2[1]=1;
+   }
+
+   if (randomnumber>=90&&randomnumber<100)
+   {
+     jh2[3]=1;
+     jh2[4]=1;
+     jh2[5]=1;
+     jh2[6]=1;
+     jh2[7]=1;
+
+     gh2[8]=1;
+     hh2[8]=1;
+     ih2[8]=1;
+     jh2[8]=1;
+
+     gh2[4]=1;
+     gh2[5]=1;
+     gh2[6]=1;
+
+     ah2[4]=1;
+     ah2[5]=1;
+     ah2[6]=1;
+
+     gh2[1]=1;
+     hh2[1]=1;
+   }
+}//end of place_enemy_ships
 
 
 
