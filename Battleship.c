@@ -61,6 +61,8 @@ int ah2[9];
 
 char b2[9];
 
+
+
 int bh2[9];
 
 char c2[9];
@@ -96,6 +98,10 @@ char j2[9];
 int jh2[9];
 
 char difficulty;
+
+int hits;
+
+int enemy_hits;
 
 //this function initalizes the arrays
 
@@ -742,19 +748,15 @@ printf("      1     2     3     4     5     6     7     8     9     10\n");
 
   printf("    ___________________________________________________________\n");
 
-
-
-
-
-
-
-  //these below are errors, just incase an invalid number is called
-
-
-
 }
 
 
+void select_difficulty()
+{
+printf("Please Select a Difficulty. Press E for Easy, and H for Hard");
+scanf("%c", difficulty);
+
+}
 
 
 
