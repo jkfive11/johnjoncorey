@@ -1418,6 +1418,8 @@ char input_char;
 initialize_arrays();
 
 print_screen(input_char, input_int);
+  
+select_difficulty();
 
 place_ships();
 
