@@ -95,7 +95,7 @@ char j2[9];
 
 int jh2[9];
 
-
+char difficulty;
 
 //this function initalizes the arrays
 
