@@ -1420,6 +1420,8 @@ initialize_arrays();
 print_screen(input_char, input_int);
   
 select_difficulty();
+  
+place_enemy_ships();
 
 place_ships();
 
