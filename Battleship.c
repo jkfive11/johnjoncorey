@@ -2960,6 +2960,7 @@ void place_enemy_ships()
 void enemy_shoots(char input_char, int input_int)
 {
 
+    input_int=input_int-1;
 
   if (input_char=='a')
 {
