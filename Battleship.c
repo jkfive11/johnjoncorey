@@ -3439,7 +3439,6 @@ void enemy_shoots(char input_char, int input_int)
 
 
 
-
 int main()
 
 {
@@ -3447,6 +3446,10 @@ int main()
 int input_int;
 
 char input_char;
+
+int enemy_int;
+
+char enemy_char;
 
 initialize_arrays();
 
@@ -3470,7 +3473,9 @@ if (difficulty=='e')
         print_screen();
         if (hits>=17)
         {printf("YOU WIN!! CONGRATS!!");}
-        strike_location();
+        enemy_char=RETURN_ROW();
+        enemy_int=RETURN_ELEMENT();
+        enemy_shoots(enemy_char,enemy_int);
         if (enemy_hits>=17)
         {printf("You Lost...Please Try Again!");
         break;}
