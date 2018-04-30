@@ -3321,7 +3321,7 @@ void enemy_shoots(char input_char, int input_int)
 {
 
    a2[input_int]=ah[input_int];
-     if (a2input_int]==1)
+     if ([a2input_int]==1)
 {
            a2[input_int]='X';
            enemy_hits++;
@@ -3495,7 +3495,9 @@ if (difficulty=='h')
         print_screen();
         if (hits>=17)
         {printf("YOU WIN!! CONGRATS!!");}
-        //smart_strike();
+        enemy_char=RETURN_ROW();
+        enemy_int=RETURN_ELEMENT();
+        enemy_shoots(enemy_char,enemy_int);
         if (enemy_hits>=17)
         {printf("You Lost...Please Try Again!");
         break;}
