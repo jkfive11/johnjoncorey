@@ -2957,6 +2957,129 @@ void place_enemy_ships()
 }//end of place_enemy_ships
 
 
+void enemy_shoots(char input_char, int input_int)
+{
+
+
+  if (input_char=='a')
+{
+
+   a2[input_int]=ah[input_int];
+     if (a2input_int]==1)
+{
+           a2[input_int]='X';
+           hits=hits+1;
+}
+        else
+            a2[input_int]='0';
+}
+    if (input_char=='b')
+{
+     b2[input_int]=bh[input_int];
+     if (b2[input_int]=1)
+{
+           b2[input_int]='X';
+            hits=hits+1;
+}
+        else
+            b2[input_int]='0';
+}
+    if (input_char=='c')
+{
+   c2[input_int]=ch[input_int];
+   if (c2[input_int]=1)
+{
+           c2[input_int]='X';
+            hits=hits+1;
+}
+        else
+            c2[input_int]='0';
+}
+    if (input_char=='d')
+{
+    d2[input_int]=dh[input_int];
+    if (d2[input_int]=1)
+{
+           d2[input_int]='X';
+            hits=hits+1;
+}
+        else
+            d2[input_int]='0';
+}
+    if (input_char=='e')
+{
+
+    e2[input_int]=eh[input_int];
+    if (e2[input_int]=1)
+{
+           e2[input_int]='X';
+            hits=hits+1;
+}
+        else
+            e2[input_int]='0';
+}
+
+    if (input_char=='f')
+{
+    f2[input_int]=fh[input_int];
+    if (f2[input_int]=1)
+{
+           f2[input_int]='X';
+            hits=hits+1;
+}
+        else
+            f2[input_int]='0';
+}
+
+    if (input_char=='g')
+{
+    g2[input_int]=gh[input_int];
+    if (g2[input_int]=1)
+{
+           g2[input_int]='X';
+            hits=hits+1;
+}
+        else
+            g2[input_int]='0';
+}
+
+    if (input_char=='h')
+{
+     h2[input_int]=hh[input_int];
+     if (h2[input_int]=1)
+{
+           h2[input_int]='X';
+            hits=hits+1;
+}
+        else
+            h2[input_int]='0';
+}
+
+    if (input_char=='i')
+{
+     i2[input_int]=ih[input_int];
+     if (i2[input_int]=1)
+     {
+           i2[input_int]='X';
+            hits=hits+1;
+}
+        else
+            i2[input_int]='0';
+}
+
+    if (input_char=='j')
+{
+     j2[input_int]=jh[input_int];
+     if (j2[input_int]=1)
+{
+           j2[input_int]='X';
+            hits=hits+1;
+}
+        else
+            j2[input_int]='0';
+}
+
+}
 
 
 
