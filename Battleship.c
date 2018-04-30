@@ -3324,7 +3324,7 @@ void enemy_shoots(char input_char, int input_int)
      if (a2input_int]==1)
 {
            a2[input_int]='X';
-           hits=hits+1;
+           enemy_hits++;
 }
         else
             a2[input_int]='0';
@@ -3335,7 +3335,7 @@ void enemy_shoots(char input_char, int input_int)
      if (b2[input_int]=1)
 {
            b2[input_int]='X';
-            hits=hits+1;
+            enemy_hits++;
 }
         else
             b2[input_int]='0';
@@ -3346,7 +3346,7 @@ void enemy_shoots(char input_char, int input_int)
    if (c2[input_int]=1)
 {
            c2[input_int]='X';
-            hits=hits+1;
+            enemy_hits++;
 }
         else
             c2[input_int]='0';
@@ -3357,7 +3357,7 @@ void enemy_shoots(char input_char, int input_int)
     if (d2[input_int]=1)
 {
            d2[input_int]='X';
-            hits=hits+1;
+            enemy_hits++;
 }
         else
             d2[input_int]='0';
@@ -3369,7 +3369,7 @@ void enemy_shoots(char input_char, int input_int)
     if (e2[input_int]=1)
 {
            e2[input_int]='X';
-            hits=hits+1;
+            enemy_hits++;
 }
         else
             e2[input_int]='0';
@@ -3381,7 +3381,7 @@ void enemy_shoots(char input_char, int input_int)
     if (f2[input_int]=1)
 {
            f2[input_int]='X';
-            hits=hits+1;
+            enemy_hits++;
 }
         else
             f2[input_int]='0';
@@ -3393,7 +3393,7 @@ void enemy_shoots(char input_char, int input_int)
     if (g2[input_int]=1)
 {
            g2[input_int]='X';
-            hits=hits+1;
+            enemy_hits++;
 }
         else
             g2[input_int]='0';
@@ -3405,7 +3405,7 @@ void enemy_shoots(char input_char, int input_int)
      if (h2[input_int]=1)
 {
            h2[input_int]='X';
-            hits=hits+1;
+            enemy_hits++;
 }
         else
             h2[input_int]='0';
@@ -3417,7 +3417,7 @@ void enemy_shoots(char input_char, int input_int)
      if (i2[input_int]=1)
      {
            i2[input_int]='X';
-            hits=hits+1;
+            enemy_hits++;
 }
         else
             i2[input_int]='0';
@@ -3429,7 +3429,7 @@ void enemy_shoots(char input_char, int input_int)
      if (j2[input_int]=1)
 {
            j2[input_int]='X';
-            hits=hits+1;
+            enemy_hits++;
 }
         else
             j2[input_int]='0';
