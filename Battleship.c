@@ -748,14 +748,14 @@ printf("      1     2     3     4     5     6     7     8     9     10\n");
 
 }
 
-
+/*
 void select_difficulty()
 {
 printf("Please Select a Difficulty. Press e for Easy, and h for Hard");
 scanf("%c", difficulty);
 
 }
-
+*/
 
 
 void change_space(char input_char, int input_int)
