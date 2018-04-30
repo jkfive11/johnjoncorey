@@ -2910,6 +2910,10 @@ void place_enemy_ships()
 
    {
 
+       
+       
+       
+       
      jh2[3]=1;
 
      jh2[4]=1;
@@ -2955,6 +2959,357 @@ void place_enemy_ships()
    }
 
 }//end of place_enemy_ships
+
+struct loc strike_location()
+{
+
+    double choice = random();
+
+
+if(choice<.01)
+        return A0;
+
+else if(0.01<=choice<0.02)
+return A1;
+else if(0.02<=choice<0.03)
+return A2;
+else if(0.03<=choice<0.04)
+return A3;
+else if(0.04<=choice<0.05)
+return A4;
+else if(0.05<=choice<0.06)
+return A5;
+else if(0.06<=choice<0.07)
+return A6;
+else if(0.07<=choice<0.08)
+return A7;
+else if(0.08<=choice<0.09)
+return A8;
+else if(0.09<=choice<0.10)
+return A9;
+else if(0.10<=choice<0.11)input_int=input_int-1;
+return B0;
+else if(0.11<=choice<0.12)
+return B1;
+else if(0.12<=choice<0.13)
+return B2;
+else if(0.13<=choice<0.14)
+return B3;
+else if(0.14<=choice<0.15)
+return B4;
+else if(0.15<=choice<0.16)
+return B5;
+else if(0.16<=choice<0.17)
+return B6;
+else if(0.17<=choice<0.18)
+return B7;
+else if(0.18<=choice<0.19)
+return B8;
+else if(0.19<=choice<0.20)
+return B9;
+else if(0.20<=choice<0.21)
+return C0;
+else if(0.21<=choice<0.22)
+return C1;
+else if(0.22<=choice<0.23)
+return C2;
+else if(0.23<=choice<0.24)
+return C3;
+else if(0.24<=choice<0.25)
+return C4;
+else if(0.25<=choice<0.26)
+return C5;
+else if(0.26<=choice<0.27)
+return C6;
+else if(0.27<=choice<0.28)
+return C7;
+else if(0.28<=choice<0.29)
+return C8;
+else if(0.29<=choice<0.30)
+return C9;
+else if(0.30<=choice<0.31)
+return D0;
+else if(0.31<=choice<0.32)
+return D1;
+else if(0.32<=choice<0.33)
+return D2;
+else if(0.33<=choice<0.34)
+return D3;
+else if(0.34<=choice<0.35)
+return D4;
+else if(0.35<=choice<0.36)
+return D5;
+else if(0.36<=choice<0.37)
+return D6;
+else if(0.37<=choice<0.38)
+return D7;
+else if(0.38<=choice<0.39)
+return D8;
+else if(0.39<=choice<0.40)
+return D9;
+else if(0.40<=choice<0.41)
+return E0;
+else if(0.41<=choice<0.42)
+return E1;
+else if(0.42<=choice<0.43)struct loc
+{
+    char row;
+    int element;
+};
+
+struct loc A0 = {'a', 1};
+struct loc A1 = {'a', 2};
+struct loc A2 = {'a', 3};
+struct loc A3 = {'a', 4};
+struct loc A4 = {'a', 5};
+struct loc A5 = {'a', 6};
+struct loc A6 = {'a', 7};
+struct loc A7 = {'a', 8};
+struct loc A8 = {'a', 9};
+struct loc A9 = {'a', 10};
+
+struct loc B0	 = {'b', 1};
+struct loc B1	 = {'b', 2};
+struct loc B2	 = {'b', 3};
+struct loc B3	 = {'b', 4};
+struct loc B4	 = {'b', 5};
+struct loc B5	 = {'b', 6};
+struct loc B6	 = {'b', 7};
+struct loc B7	 = {'b', 8};
+struct loc B8	 = {'b', 9};
+struct loc B9	 = {'b', 10};
+
+struct loc C0	 = {'c', 1};
+struct loc C1	 = {'c', 2};
+struct loc C2	 = {'c', 3};
+struct loc C3	 = {'c', 4};
+struct loc C4	 = {'c', 5};
+struct loc C5	 = {'c', 6};
+struct loc C6	 = {'c', 7};
+struct loc C7	 = {'c', 8};
+struct loc C8	 = {'c', 9};
+struct loc C9	 = {'c', 10};
+
+
+struct loc D0	 = {'d', 1};
+struct loc D1	 = {'d', 2};
+struct loc D2	 = {'d', 3};
+struct loc D3	 = {'d', 4};
+struct loc D4	 = {'d', 5};
+struct loc D5	 = {'d', 6};
+struct loc D6	 = {'d', 7};
+struct loc D7	 = {'d', 8};
+struct loc D8	 = {'d', 9};
+struct loc D9	 = {'d', 10};
+
+struct loc E0	 = {'e', 1};
+struct loc E1	 = {'e', 2};
+struct loc E2	 = {'e', 3};
+struct loc E3	 = {'e', 4};
+struct loc E4	 = {'e', 5};
+struct loc E5	 = {'e', 6};
+struct loc E6	 = {'e', 7};
+struct loc E7	 = {'e', 8};
+struct loc E8	 = {'e', 9};
+struct loc E9	 = {'e', 10};
+
+struct loc F0	 = {'f', 1};
+struct loc F1	 = {'f', 2};
+struct loc F2	 = {'f', 3};
+struct loc F3	 = {'f', 4};
+struct loc F4	 = {'f', 5};
+struct loc F5	 = {'f', 6};
+struct loc F6	 = {'f', 7};
+struct loc F7	 = {'f', 8};
+struct loc F8	 = {'f', 9};
+struct loc F9	 = {'f', 10};
+
+
+struct loc G0	 = {'g', 1};
+struct loc G1	 = {'g', 2};
+struct loc G2	 = {'g', 3};
+struct loc G3	 = {'g', 4};
+struct loc G4	 = {'g', 5};
+struct loc G5	 = {'g', 6};
+struct loc G6	 = {'g', 7};
+struct loc G7	 = {'g', 8};
+struct loc G8	 = {'g', 9};
+struct loc G9	 = {'g', 10};
+
+struct loc H0	 = {'h', 1};
+struct loc H1	 = {'h', 2};
+struct loc H2	 = {'h', 3};
+struct loc H3	 = {'h', 4};
+struct loc H4	 = {'h', 5};
+struct loc H5	 = {'h', 6};
+struct loc H6	 = {'h', 7};
+struct loc H7	 = {'h', 8};
+struct loc H8	 = {'h', 9};
+struct loc H9	 = {'h', 10};
+
+
+struct loc I0	 = {'i', 1};
+struct loc I1	 = {'i', 2};
+struct loc I2	 = {'i', 3};
+struct loc I3	 = {'i', 4};
+struct loc I4	 = {'i', 5};
+struct loc I5	 = {'i', 6};
+struct loc I6	 = {'i', 7};
+struct loc I7	 = {'i', 8};
+struct loc I8	 = {'i', 9};
+struct loc I9	 = {'i', 10};
+
+struct loc J0	 = {'j', 1};
+struct loc J1	 = {'j', 2};
+struct loc J2	 = {'j', 3};
+struct loc J3	 = {'j', 4};
+struct loc J4	 = {'j', 5};
+struct loc J5	 = {'j', 6};
+struct loc J6	 = {'j', 7};
+struct loc J7	 = {'j', 8};
+struct loc J8	 = {'j', 9};
+struct loc J9	 = {'j', 10};
+//}
+return E2;
+else if(0.43<=choice<0.44)
+return E3;
+else if(0.44<=choice<0.45)
+return E4;
+else if(0.45<=choice<0.46)
+return E5;
+else if(0.46<=choice<0.47)
+return E6;
+else if(0.47<=choice<0.48)
+return E7;
+else if(0.48<=choice<0.49)
+return E8;
+else if(0.49<=choice<0.50)
+return E9;
+else if(0.50<=choice<0.51)
+return F0;
+else if(0.51<=choice<0.52)
+return F1;
+else if(0.52<=choice<0.53)
+return F2;
+else if(0.53<=choice<0.54)
+return F3;
+else if(0.54<=choice<0.55)
+return F4;
+else if(0.55<=choice<0.56)
+return F5;
+else if(0.56<=choice<0.57)
+return F6;
+else if(0.57<=choice<0.58)
+return F7;
+else if(0.58<=choice<0.59)
+return F8;
+else if(0.59<=choice<0.60)
+return F9;
+else if(0.60<=choice<0.61)
+return G0;
+else if(0.61<=choice<0.62)
+return G1;
+else if(0.62<=choice<0.63)
+return G2;
+else if(0.63<=choice<0.64)
+return G3;
+else if(0.64<=choice<0.65)
+return G4;
+else if(0.65<=choice<0.66)
+return G5;
+else if(0.66<=choice<0.67)
+return G6;
+else if(0.67<=choice<0.68)
+return G7;
+else if(0.68<=choice<0.69)
+return G8;
+else if(0.69<=choice<0.70)
+return G9;
+else if(0.70<=choice<0.71)
+return H0;
+else if(0.71<=choice<0.72)
+return H1;
+else if(0.72<=choice<0.73)
+return H2;
+else if(0.73<=choice<0.74)
+return H3;
+else if(0.74<=choice<0.75)
+return H4;
+else if(0.75<=choice<0.76)
+return H5;
+else if(0.76<=choice<0.77)
+return H6;
+else if(0.77<=choice<0.78)
+return H7;
+else if(0.78<=choice<0.79)
+return H8;
+else if(0.79<=choice<0.80)
+return H9;
+else if(0.80<=choice<0.81)
+return I0;
+else if(0.81<=choice<0.82)
+return I1;
+else if(0.82<=choice<0.83)
+return I2;
+else if(0.83<=choice<0.84)
+return I3;
+else if(0.84<=choice<0.85)
+return I4;
+else if(0.85<=choice<0.86)
+return I5;
+else if(0.86<=choice<0.87)
+return I6;
+else if(0.87<=choice<0.88)
+return I7;
+else if(0.88<=choice<0.89)
+return I8;
+else if(0.89<=choice<0.90)
+return I9;
+else if(0.90<=choice<0.91)
+return J0;
+else if(0.91<=choice<0.92)
+return J1;
+else if(0.92<=choice<0.93)
+return J2;
+else if(0.93<=choice<0.94)
+return J3;
+else if(0.94<=choice<0.95)
+return J4;
+else if(0.95<=choice<0.96)
+return J5;
+else if(0.96<=choice<0.97)
+return J6;
+else if(0.97<=choice<0.98)
+return J7;
+else if(0.98<=choice<0.99)
+return J8;
+else if(0.99<=choice<=1.00)
+return J9;
+}
+
+
+int struct_int_return(struct loc x)
+{
+    return x.element;
+}
+char struct_char_return(struct loc x)
+{
+    return x.row;
+}
+
+char RETURN_ROW()
+{
+
+
+    char CHAR_INPUT = struct_char_return(strike_location());
+    return CHAR_INPUT;
+}
+int RETURN_ELEMENT()
+{
+
+    int INT_INPUT = struct_int_return(strike_location());
+    return INT_INPUT;
+}
 
 
 void enemy_shoots(char input_char, int input_int)
