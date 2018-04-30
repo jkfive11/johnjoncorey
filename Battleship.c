@@ -1476,6 +1476,7 @@ printf("      1     2     3     4     5     6     7     8     9     10\n");
 
 
 
+  
   printf("    ___________________________________________________________\n");
 
 
@@ -1506,7 +1507,7 @@ return difficulty;
 }
 
 
-void user_shoots(char input_char, int input_int, int hits)
+void user_shoots(char input_char, int input_int)
 {
 
 
@@ -2839,77 +2840,65 @@ void place_enemy_ships()
 
 
 
-
 int main()
-
-
 
 {
 
-
-
 int input_int;
-
-
 
 char input_char;
 
-
-
 initialize_arrays();
-
-
-
-print_screen(input_char, input_int);
-
-
-
-//select_difficulty();
-
-
-
-place_enemy_ships();
-
-
-
-place_ships();
-
-
-
-printf(" Input letter of row you would like to shoot at:");
-
-
-
-scanf("%c", &input_char);
-
-
-
-printf("Input number of the place you would like to shoot at:");
-
-
-
-scanf("%d", &input_int);
-
-
-
-input_int=input_int-1;//BECAUSE OF ARRAYS
-
-
-
-user_shoots(input_char, input_int, hits);
-
-
 
 print_screen();
 
+place_enemy_ships();
 
+char difficulty=select_difficulty();
 
+place_ships();
 
+if (difficulty=='e')
+{
+    while (hits<17&&enemy_hits<17)
+    {
+        printf("Input the letter of the space you would like to shoot at: ");
+        scanf("%c", &input_char);
+        printf("Input the number of the space you would like to shoot at: ");
+        scanf("%c", &input_int);
+        user_shoots(input_char, input_int);
+        print_screen();
+        if (hits>=17)
+        {printf("YOU WIN!! CONGRATS!!");}
+        strike_location();
+        if (enemy_hits>=17)
+        {printf("You Lost...Please Try Again!");
+        break;}
+        print_screen();
+    }
+}
 
-
-
+if (difficulty=='h')
+{
+    while (hits<17&&enemy_hits<17)
+    {
+        printf("Input the letter of the space you would like to shoot at: ");
+        scanf("%c", &input_char);
+        printf("Input the number of the space you would like to shoot at: ");
+        scanf("%c", &input_int);
+        user_shoots(input_char, input_int);
+        print_screen();
+        if (hits>=17)
+        {printf("YOU WIN!! CONGRATS!!");}
+        //smart_strike();
+        if (enemy_hits>=17)
+        {printf("You Lost...Please Try Again!");
+        break;}
+        print_screen();
+    }
+}
+printf("Program Ended. Thank You For Playing!");
 return 0;
 
-
-
 }//end of main function
+
