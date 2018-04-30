@@ -194,10 +194,6 @@ int jh2[10];
 
 
 
-char difficulty;
-
-
-
 int hits;
 
 
@@ -1501,19 +1497,13 @@ printf("      1     2     3     4     5     6     7     8     9     10\n");
 
 
 
-
-/*void select_difficulty()
-
+char select_difficulty()
 {
-
-printf("Please Select a Difficulty. Press E for Easy, and H for Hard");
-
-scanf("%c", difficulty);
-
-
-
-}*/
-
+char difficulty;
+printf("Please Select a Difficulty. Press e for Easy, and h for Hard");
+scanf("%c", &difficulty);
+return difficulty;
+}
 
 
 void user_shoots(char input_char, int input_int, int hits)
