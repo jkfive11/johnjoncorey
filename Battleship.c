@@ -1337,7 +1337,7 @@ void print_screen()//will be 5 spaces in between each vertical line filled with 
 
 {
 
-    system("cls");
+system("cls");
 
 
 
@@ -1630,10 +1630,12 @@ return difficulty;
 
 void user_shoots(char input_char, int input_int)
 {
-
-
+printf("TEST %c %d", input_char, input_int);
+input_int=input_int-1;
   if (input_char=='a')
 {
+
+
 
    a2[input_int]=ah2[input_int];
      if (a2[input_int]==1)
@@ -2966,119 +2968,119 @@ void enemy_shoots(char input_char, int input_int)
   if (input_char=='a')
 {
 
-   a2[input_int]=ah[input_int];
-     if (a2[input_int]==1)
+   a[input_int]=ah[input_int];
+     if (a[input_int]==1)
 {
-           a2[input_int]='X';
+           a[input_int]='X';
            enemy_hits++;
 }
         else
-            a2[input_int]='0';
+            a[input_int]='0';
 }
     if (input_char=='b')
 {
-     b2[input_int]=bh[input_int];
-     if (b2[input_int]=1)
+     b[input_int]=bh[input_int];
+     if (b[input_int]=1)
 {
-           b2[input_int]='X';
+           b[input_int]='X';
             enemy_hits++;
 }
         else
-            b2[input_int]='0';
+            b[input_int]='0';
 }
     if (input_char=='c')
 {
-   c2[input_int]=ch[input_int];
-   if (c2[input_int]=1)
+   c[input_int]=ch[input_int];
+   if (c[input_int]=1)
 {
-           c2[input_int]='X';
+           c[input_int]='X';
             enemy_hits++;
 }
         else
-            c2[input_int]='0';
+            c[input_int]='0';
 }
     if (input_char=='d')
 {
-    d2[input_int]=dh[input_int];
-    if (d2[input_int]=1)
+    d[input_int]=dh[input_int];
+    if (d[input_int]=1)
 {
-           d2[input_int]='X';
+           d[input_int]='X';
             enemy_hits++;
 }
         else
-            d2[input_int]='0';
+            d[input_int]='0';
 }
     if (input_char=='e')
 {
 
-    e2[input_int]=eh[input_int];
-    if (e2[input_int]=1)
+    e[input_int]=eh[input_int];
+    if (e[input_int]=1)
 {
-           e2[input_int]='X';
+           e[input_int]='X';
             enemy_hits++;
 }
         else
-            e2[input_int]='0';
+            e[input_int]='0';
 }
 
     if (input_char=='f')
 {
-    f2[input_int]=fh[input_int];
-    if (f2[input_int]=1)
+    f[input_int]=fh[input_int];
+    if (f[input_int]=1)
 {
-           f2[input_int]='X';
+           f[input_int]='X';
             enemy_hits++;
 }
         else
-            f2[input_int]='0';
+            f[input_int]='0';
 }
 
     if (input_char=='g')
 {
-    g2[input_int]=gh[input_int];
-    if (g2[input_int]=1)
+    g[input_int]=gh[input_int];
+    if (g[input_int]=1)
 {
-           g2[input_int]='X';
+           g[input_int]='X';
             enemy_hits++;
 }
         else
-            g2[input_int]='0';
+            g[input_int]='0';
 }
 
     if (input_char=='h')
 {
-     h2[input_int]=hh[input_int];
-     if (h2[input_int]=1)
+     h[input_int]=hh[input_int];
+     if (h[input_int]=1)
 {
-           h2[input_int]='X';
+           h[input_int]='X';
             enemy_hits++;
 }
         else
-            h2[input_int]='0';
+            h[input_int]='0';
 }
 
     if (input_char=='i')
 {
-     i2[input_int]=ih[input_int];
-     if (i2[input_int]=1)
+     i[input_int]=ih[input_int];
+     if (i[input_int]=1)
      {
-           i2[input_int]='X';
+           i[input_int]='X';
             enemy_hits++;
 }
         else
-            i2[input_int]='0';
+            i[input_int]='0';
 }
 
     if (input_char=='j')
 {
-     j2[input_int]=jh[input_int];
-     if (j2[input_int]=1)
+     j[input_int]=jh[input_int];
+     if (j[input_int]=1)
 {
-           j2[input_int]='X';
+           j[input_int]='X';
             enemy_hits++;
 }
         else
-            j2[input_int]='0';
+            j[input_int]='0';
 }
 
 }
@@ -3089,9 +3091,7 @@ int main()
 
 {
 
-int input_int;
-
-char input_char;
+srand(time(NULL));
 
 int enemy_int;
 
@@ -3103,22 +3103,86 @@ print_screen();
 
 place_enemy_ships();
 
-char difficulty=select_difficulty();
+//char difficulty=select_difficulty();
+
+char difficulty='e';
 
 getchar();
 
 place_ships();
 
+getchar();
+
 if (difficulty=='e')
 {
+            int input_int;
+        char input_char;
     while (hits<17&&enemy_hits<17)
     {
+
+      printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", ah[0], ah[0], ah[0], ah[0], ah[0], ah[1], ah[1], ah[1], ah[1], ah[1], ah[2], ah[2], ah[2], ah[2], ah[2], ah[3], ah[3], ah[3], ah[3], ah[3], ah[4], ah[4], ah[4], ah[4], ah[4], ah[5], ah[5], ah[5], ah[5], ah[5], ah[6], ah[6], ah[6], ah[6], ah[6], ah[7], ah[7], ah[7], ah[7], ah[7], ah[8], ah[8], ah[8], ah[8], ah[8], ah[9], ah[9], ah[9], ah[9], ah[9], ah[10], ah[10], ah[10], ah[10], ah[10]);
+
+  printf("    ___________________________________________________________\n");
+
+  printf("B  |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", bh[0], bh[0], bh[0], bh[0], bh[0], bh[1], bh[1], bh[1], bh[1], bh[1], bh[2], bh[2], bh[2], bh[2], bh[2], bh[3], bh[3], bh[3], bh[3], bh[3], bh[4], bh[4], bh[4], bh[4], bh[4], bh[5], bh[5], bh[5], bh[5], bh[5], bh[6], bh[6], bh[6], bh[6], bh[6], bh[7], bh[7], bh[7], bh[7], bh[7], bh[8], bh[8], bh[8], bh[8], bh[8], bh[9], bh[9], bh[9], bh[9], bh[9], bh[10], bh[10], bh[10], bh[10], bh[10]);
+
+  printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", bh[0], bh[0], bh[0], bh[0], bh[0], bh[1], bh[1], bh[1], bh[1], bh[1], bh[2], bh[2], bh[2], bh[2], bh[2], bh[3], bh[3], bh[3], bh[3], bh[3], bh[4], bh[4], bh[4], bh[4], bh[4], bh[5], bh[5], bh[5], bh[5], bh[5], bh[6], bh[6], bh[6], bh[6], bh[6], bh[7], bh[7], bh[7], bh[7], bh[7], bh[8], bh[8], bh[8], bh[8], bh[8], bh[9], bh[9], bh[9], bh[9], bh[9], bh[10], bh[10], bh[10], bh[10], bh[10]);
+
+  printf("    ___________________________________________________________\n");
+
+  printf("C  |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", ch[0], ch[0], ch[0], ch[0], ch[0], ch[1], ch[1], ch[1], ch[1], ch[1], ch[2], ch[2], ch[2], ch[2], ch[2], ch[3], ch[3], ch[3], ch[3], ch[3], ch[4], ch[4], ch[4], ch[4], ch[4], ch[5], ch[5], ch[5], ch[5], ch[5], ch[6], ch[6], ch[6], ch[6], ch[6], ch[7], ch[7], ch[7], ch[7], ch[7], ch[8], ch[8], ch[8], ch[8], ch[8], ch[9], ch[9], ch[9], ch[9], ch[9], ch[10], ch[10], ch[10], ch[10], ch[10]);
+
+  printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", ch[0], ch[0], ch[0], ch[0], ch[0], ch[1], ch[1], ch[1], ch[1], ch[1], ch[2], ch[2], ch[2], ch[2], ch[2], ch[3], ch[3], ch[3], ch[3], ch[3], ch[4], ch[4], ch[4], ch[4], ch[4], ch[5], ch[5], ch[5], ch[5], ch[5], ch[6], ch[6], ch[6], ch[6], ch[6], ch[7], ch[7], ch[7], ch[7], ch[7], ch[8], ch[8], ch[8], ch[8], ch[8], ch[9], ch[9], ch[9], ch[9], ch[9], ch[10], ch[10], ch[10], ch[10], ch[10]);
+
+  printf("    ___________________________________________________________\n");
+
+  printf("D  |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", dh[0], dh[0], dh[0], dh[0], dh[0], dh[1], dh[1], dh[1], dh[1], dh[1], dh[2], dh[2], dh[2], dh[2], dh[2], dh[3], dh[3], dh[3], dh[3], dh[3], dh[4], dh[4], dh[4], dh[4], dh[4], dh[5], dh[5], dh[5], dh[5], dh[5], dh[6], dh[6], dh[6], dh[6], dh[6], dh[7], dh[7], dh[7], dh[7], dh[7], dh[8], dh[8], dh[8], dh[8], dh[8], dh[9], dh[9], dh[9], dh[9], dh[9], dh[10], dh[10], dh[10], dh[10], dh[10]);
+
+  printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", dh[0], dh[0], dh[0], dh[0], dh[0], dh[1], dh[1], dh[1], dh[1], dh[1], dh[2], dh[2], dh[2], dh[2], dh[2], dh[3], dh[3], dh[3], dh[3], dh[3], dh[4], dh[4], dh[4], dh[4], dh[4], dh[5], dh[5], dh[5], dh[5], dh[5], dh[6], dh[6], dh[6], dh[6], dh[6], dh[7], dh[7], dh[7], dh[7], dh[7], dh[8], dh[8], dh[8], dh[8], dh[8], dh[9], dh[9], dh[9], dh[9], dh[9], dh[10], dh[10], dh[10], dh[10], dh[10]);
+
+  printf("    ___________________________________________________________\n");
+
+  printf("E  |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", eh[0], eh[0], eh[0], eh[0], eh[0], eh[1], eh[1], eh[1], eh[1], eh[1], eh[2], eh[2], eh[2], eh[2], eh[2], eh[3], eh[3], eh[3], eh[3], eh[3], eh[4], eh[4], eh[4], eh[4], eh[4], eh[5], eh[5], eh[5], eh[5], eh[5], eh[6], eh[6], eh[6], eh[6], eh[6], eh[7], eh[7], eh[7], eh[7], eh[7], eh[8], eh[8], eh[8], eh[8], eh[8], eh[9], eh[9], eh[9], eh[9], eh[9], eh[10], eh[10], eh[10], eh[10], eh[10]);
+
+  printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", eh[0], eh[0], eh[0], eh[0], eh[0], eh[1], eh[1], eh[1], eh[1], eh[1], eh[2], eh[2], eh[2], eh[2], eh[2], eh[3], eh[3], eh[3], eh[3], eh[3], eh[4], eh[4], eh[4], eh[4], eh[4], eh[5], eh[5], eh[5], eh[5], eh[5], eh[6], eh[6], eh[6], eh[6], eh[6], eh[7], eh[7], eh[7], eh[7], eh[7], eh[8], eh[8], eh[8], eh[8], eh[8], eh[9], eh[9], eh[9], eh[9], eh[9], eh[10], eh[10], eh[10], eh[10], eh[10]);
+
+  printf("    ___________________________________________________________\n");
+
+  printf("F  |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", fh[0], fh[0], fh[0], fh[0], fh[0], fh[1], fh[1], fh[1], fh[1], fh[1], fh[2], fh[2], fh[2], fh[2], fh[2], fh[3], fh[3], fh[3], fh[3], fh[3], fh[4], fh[4], fh[4], fh[4], fh[4], fh[5], fh[5], fh[5], fh[5], fh[5], fh[6], fh[6], fh[6], fh[6], fh[6], fh[7], fh[7], fh[7], fh[7], fh[7], fh[8], fh[8], fh[8], fh[8], fh[8], fh[9], fh[9], fh[9], fh[9], fh[9], fh[10], fh[10], fh[10], fh[10], fh[10]);
+
+  printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", fh[0], fh[0], fh[0], fh[0], fh[0], fh[1], fh[1], fh[1], fh[1], fh[1], fh[2], fh[2], fh[2], fh[2], fh[2], fh[3], fh[3], fh[3], fh[3], fh[3], fh[4], fh[4], fh[4], fh[4], fh[4], fh[5], fh[5], fh[5], fh[5], fh[5], fh[6], fh[6], fh[6], fh[6], fh[6], fh[7], fh[7], fh[7], fh[7], fh[7], fh[8], fh[8], fh[8], fh[8], fh[8], fh[9], fh[9], fh[9], fh[9], fh[9], fh[10], fh[10], fh[10], fh[10], fh[10]);
+
+  printf("    ___________________________________________________________\n");
+
+  printf("G  |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", gh[0], gh[0], gh[0], gh[0], gh[0], gh[1], gh[1], gh[1], gh[1], gh[1], gh[2], gh[2], gh[2], gh[2], gh[2], gh[3], gh[3], gh[3], gh[3], gh[3], gh[4], gh[4], gh[4], gh[4], gh[4], gh[5], gh[5], gh[5], gh[5], gh[5], gh[6], gh[6], gh[6], gh[6], gh[6], gh[7], gh[7], gh[7], gh[7], gh[7], gh[8], gh[8], gh[8], gh[8], gh[8], gh[9], gh[9], gh[9], gh[9], gh[9], gh[10], gh[10], gh[10], gh[10], gh[10]);
+
+  printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", gh[0], gh[0], gh[0], gh[0], gh[0], gh[1], gh[1], gh[1], gh[1], gh[1], gh[2], gh[2], gh[2], gh[2], gh[2], gh[3], gh[3], gh[3], gh[3], gh[3], gh[4], gh[4], gh[4], gh[4], gh[4], gh[5], gh[5], gh[5], gh[5], gh[5], gh[6], gh[6], gh[6], gh[6], gh[6], gh[7], gh[7], gh[7], gh[7], gh[7], gh[8], gh[8], gh[8], gh[8], gh[8], gh[9], gh[9], gh[9], gh[9], gh[9], gh[10], gh[10], gh[10], gh[10], gh[10]);
+
+  printf("    ___________________________________________________________\n");
+
+  printf("H  |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", hh[0], hh[0], hh[0], hh[0], hh[0], hh[1], hh[1], hh[1], hh[1], hh[1], hh[2], hh[2], hh[2], hh[2], hh[2], hh[3], hh[3], hh[3], hh[3], hh[3], hh[4], hh[4], hh[4], hh[4], hh[4], hh[5], hh[5], hh[5], hh[5], hh[5], hh[6], hh[6], hh[6], hh[6], hh[6], hh[7], hh[7], hh[7], hh[7], hh[7], hh[8], hh[8], hh[8], hh[8], hh[8], hh[9], hh[9], hh[9], hh[9], hh[9], hh[10], hh[10], hh[10], hh[10], hh[10]);
+
+  printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", hh[0], hh[0], hh[0], hh[0], hh[0], hh[1], hh[1], hh[1], hh[1], hh[1], hh[2], hh[2], hh[2], hh[2], hh[2], hh[3], hh[3], hh[3], hh[3], hh[3], hh[4], hh[4], hh[4], hh[4], hh[4], hh[5], hh[5], hh[5], hh[5], hh[5], hh[6], hh[6], hh[6], hh[6], hh[6], hh[7], hh[7], hh[7], hh[7], hh[7], hh[8], hh[8], hh[8], hh[8], hh[8], hh[9], hh[9], hh[9], hh[9], hh[9], hh[10], hh[10], hh[10], hh[10], hh[10]);
+
+  printf("    ___________________________________________________________\n");
+
+  printf("I  |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", ih[0], ih[0], ih[0], ih[0], ih[0], ih[1], ih[1], ih[1], ih[1], ih[1], ih[2], ih[2], ih[2], ih[2], ih[2], ih[3], ih[3], ih[3], ih[3], ih[3], ih[4], ih[4], ih[4], ih[4], ih[4], ih[5], ih[5], ih[5], ih[5], ih[5], ih[6], ih[6], ih[6], ih[6], ih[6], ih[7], ih[7], ih[7], ih[7], ih[7], ih[8], ih[8], ih[8], ih[8], ih[8], ih[9], ih[9], ih[9], ih[9], ih[9], ih[10], ih[10], ih[10], ih[10], ih[10]);
+
+  printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", ih[0], ih[0], ih[0], ih[0], ih[0], ih[1], ih[1], ih[1], ih[1], ih[1], ih[2], ih[2], ih[2], ih[2], ih[2], ih[3], ih[3], ih[3], ih[3], ih[3], ih[4], ih[4], ih[4], ih[4], ih[4], ih[5], ih[5], ih[5], ih[5], ih[5], ih[6], ih[6], ih[6], ih[6], ih[6], ih[7], ih[7], ih[7], ih[7], ih[7], ih[8], ih[8], ih[8], ih[8], ih[8], ih[9], ih[9], ih[9], ih[9], ih[9], ih[10], ih[10], ih[10], ih[10], ih[10]);
+
+  printf("    ___________________________________________________________\n");
+
+  printf("J  |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", jh[0], jh[0], jh[0], jh[0], jh[0], jh[1], jh[1], jh[1], jh[1], jh[1], jh[2], jh[2], jh[2], jh[2], jh[2], jh[3], jh[3], jh[3], jh[3], jh[3], jh[4], jh[4], jh[4], jh[4], jh[4], jh[5], jh[5], jh[5], jh[5], jh[5], jh[6], jh[6], jh[6], jh[6], jh[6], jh[7], jh[7], jh[7], jh[7], jh[7], jh[8], jh[8], jh[8], jh[8], jh[8], jh[9], jh[9], jh[9], jh[9], jh[9], jh[10], jh[10], jh[10], jh[10], jh[10]);
+
+  printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", jh[0], jh[0], jh[0], jh[0], jh[0], jh[1], jh[1], jh[1], jh[1], jh[1], jh[2], jh[2], jh[2], jh[2], jh[2], jh[3], jh[3], jh[3], jh[3], jh[3], jh[4], jh[4], jh[4], jh[4], jh[4], jh[5], jh[5], jh[5], jh[5], jh[5], jh[6], jh[6], jh[6], jh[6], jh[6], jh[7], jh[7], jh[7], jh[7], jh[7], jh[8], jh[8], jh[8], jh[8], jh[8], jh[9], jh[9], jh[9], jh[9], jh[9], jh[10], jh[10], jh[10], jh[10], jh[10]);
+
         printf("Input the letter of the space you would like to shoot at: ");
         scanf("%c", &input_char);
+        getchar();
         printf("Input the number of the space you would like to shoot at: ");
-        scanf("%c", &input_int);
+        scanf("%d", &input_int);
+        getchar();
         user_shoots(input_char, input_int);
-        print_screen();
         if (hits>=17)
         {printf("YOU WIN!! CONGRATS!!");}
         enemy_char=RETURN_ROW();
@@ -3133,12 +3197,14 @@ if (difficulty=='e')
 
 if (difficulty=='h')
 {
+                int input_int;
+        char input_char;
     while (hits<17&&enemy_hits<17)
     {
         printf("Input the letter of the space you would like to shoot at: ");
         scanf("%c", &input_char);
         printf("Input the number of the space you would like to shoot at: ");
-        scanf("%c", &input_int);
+        scanf("%d", &input_int);
         user_shoots(input_char, input_int);
         print_screen();
         if (hits>=17)
