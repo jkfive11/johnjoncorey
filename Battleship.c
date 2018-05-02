@@ -1597,7 +1597,7 @@ printf("      1     2     3     4     5     6     7     8     9     10\n");
 
 
 
-  
+
   printf("    ___________________________________________________________\n");
 
 
@@ -1751,12 +1751,6 @@ void user_shoots(char input_char, int input_int)
 }
 
 }
-
-
-
-
-
-
 
 
 
@@ -2675,10 +2669,10 @@ void place_enemy_ships()
 
    {
 
-       
-       
-       
-       
+
+
+
+
      jh2[3]=1;
 
      jh2[4]=1;
@@ -2724,6 +2718,11 @@ void place_enemy_ships()
    }
 
 }//end of place_enemy_ships
+
+double random()
+{
+    return (double)rand()/(double)RAND_MAX;
+}
 
 struct loc strike_location()
 {
@@ -3105,6 +3104,8 @@ print_screen();
 place_enemy_ships();
 
 char difficulty=select_difficulty();
+
+getchar();
 
 place_ships();
 
