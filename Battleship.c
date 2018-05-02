@@ -1760,687 +1760,452 @@ void user_shoots(char input_char, int input_int)
 
 
 
-//THE GLITCH OF THIS FUNCTION IS THAT YOU CAN PLACE SHIPS ON TOP OF EACH OTHER. ENTERING THE SHIPS KINDA STINKS
-
 void place_ships()
-
 {
-
   char char_beg;
-
   char char_end;
-
   int int_1;
-
   int int_2;
-
   int int_3;
-
   int int_4;
-
   int int_5;
-
   int valid;
-
   int difference;
-
     do{
-
         valid=0;
-
   printf("Where would you like to place your carrier? (5 spaces) You may only place it horizontally or vertically.\n");
-
   printf("Please enter it in form a5-a1 with the HIGHEST number first or the FIRST letter alphabetically first (ex:a1-e1)\n");
-
   scanf("%c%d-%c%d", &char_beg, &int_1, &char_end, &int_5);
-
   getchar();
 
-
-
         int_1=int_1-1;
-
         int_5=int_5-1;
-
   difference = int_1-int_5;
-
+  if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
+  { printf("Please input a valid first letter");
+    valid=1;}
+  if (char_end!='a'&&char_end!='b'&&char_end!='c'&&char_end!='d'&&char_end!='e'&&char_end!='f'&&char_end!='g'&&char_end!='h'&&char_end!='i'&&char_end!='j')
+  { printf("Please input a valid second letter");
+    valid=1;}
+  if (int_1!=0&&int_1!=1&&int_1!=2&&int_1!=3&&int_1!=4&&int_1!=5&&int_1!=6&&int_1!=7&&int_1!=8&&int_1!=9)
+    { printf("Please input a valid first number");
+    valid=1;}
+  if (int_5!=0&&int_5!=1&&int_5!=2&&int_5!=3&&int_5!=4&&int_5!=5&&int_5!=6&&int_5!=7&&int_5!=8&&int_5!=9)
+    { printf("Please input a valid first number");
+    valid=1;}
  /* if(difference!=4||difference!=0||int_1>=10||int_5>=10)//THERE'S AN ERROR HERE BECAUSE IT WILL ALWAYS BE TRUE
-
-  {printf("This input is invalid, please try again."); */
-
-  valid=1;}
-
- while(valid==0);
-
-
+  {printf("This input is invalid, please try again."); */}while(valid==1);
 
   if (difference==0)
-
   {
-
       int int_2=int_1;
-
    int int_3=int_1;
-
    int int_4=int_1;
-
      if (char_beg=='a')
-
       {ah[int_1]=1, bh[int_2]=1, ch[int_3]=1, dh[int_4]=1, eh[int_5]=1;}
-
     if (char_beg=='b')
-
       {bh[int_1]=1, ch[int_2]=1, dh[int_3]=1, eh[int_4]=1, fh[int_5]=1;}
-
     if (char_beg=='c')
-
       {ch[int_1]=1, dh[int_2]=1, eh[int_3]=1, fh[int_4]=1, gh[int_5]=1;}
-
     if (char_beg=='d')
-
       {dh[int_1]=1, eh[int_2]=1, fh[int_3]=1, gh[int_4]=1, hh[int_5]=1;}
-
     if (char_beg=='e')
-
       {eh[int_1]=1, fh[int_2]=1, gh[int_3]=1, hh[int_4]=1, ih[int_5]=1;}
-
     if (char_beg=='f')
-
       {fh[int_1]=1, gh[int_2]=1, hh[int_3]=1, ih[int_4]=1, jh[int_5]=1;}
-
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
-
     printf("Invalid letter, restart program\n");
-
   }
-
   if (difference==4)
-
 {
-
   int int_2=int_1-1;
-
    int int_3=int_2-1;
-
    int int_4=int_3-1;
-
   if (char_beg=='a')
-
       {ah[int_1]=1, ah[int_2]=1, ah[int_3]=1, ah[int_4]=1, ah[int_5]=1;}
-
     if (char_beg=='b')
-
       {bh[int_1]=1, bh[int_2]=1, bh[int_3]=1, bh[int_4]=1, bh[int_5]=1;}
-
     if (char_beg=='c')
-
       {ch[int_1]=1, ch[int_2]=1, ch[int_3]=1, ch[int_4]=1, ch[int_5]=1;}
-
     if (char_beg=='d')
-
       {dh[int_1]=1, dh[int_2]=1, dh[int_3]=1, dh[int_4]=1, dh[int_5]=1;}
-
     if (char_beg=='e')
-
       {eh[int_1]=1, eh[int_2]=1, eh[int_3]=1, eh[int_4]=1, eh[int_5]=1;}
-
     if (char_beg=='f')
-
       {fh[int_1]=1, fh[int_2]=1, fh[int_3]=1, fh[int_4]=1, fh[int_5]=1;}
-
     if (char_beg=='g')
-
       {gh[int_1]=1, gh[int_2]=1, gh[int_3]=1, gh[int_4]=1, gh[int_5]=1;}
-
     if (char_beg=='h')
-
       {hh[int_1]=1, hh[int_2]=1, hh[int_3]=1, hh[int_4]=1, hh[int_5]=1;}
-
     if (char_beg=='i')
-
       {ih[int_1]=1, ih[int_2]=1, ih[int_3]=1, ih[int_4]=1, ih[int_5]=1;}
-
     if (char_beg=='j')
-
       {jh[int_1]=1, jh[int_2]=1, jh[int_3]=1, jh[int_4]=1, jh[int_5]=1;}
-
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
-
     printf("Invalid letter, restart program\n");
-
   }
-
-
-
 
 
   if(difference!=0&&difference!=4)
-
     printf("Invalid Range, restart program\n");
-
         do{
-
         valid=0;
-
   printf("Where would you like to place your battleship? (4 spaces) You may only place it horizontally or vertically.\n");
-
   printf("Please enter it in form a4-a1 with the HIGHEST number first or the FIRST letter alphabetically first (ex:a1-d1)\n");
-
   scanf("%c%d-%c%d", &char_beg, &int_1, &char_end, &int_5);
-
     getchar();
-
                     int_1=int_1-1;
-
         int_5=int_5-1;
-
   difference = int_1-int_5;
-
-/*  if(difference!=3||difference!=0||int_1>=10||int_5>=10)
-
-  {printf("This input is invalid, please try again.");*/
-
-  valid=1;}
-
- while(valid!=1);
-
+  if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
+  { printf("Please input a valid first letter");
+    valid=1;}
+  if (char_end!='a'&&char_end!='b'&&char_end!='c'&&char_end!='d'&&char_end!='e'&&char_end!='f'&&char_end!='g'&&char_end!='h'&&char_end!='i'&&char_end!='j')
+  { printf("Please input a valid second letter");
+    valid=1;}
+  if (int_1!=0&&int_1!=1&&int_1!=2&&int_1!=3&&int_1!=4&&int_1!=5&&int_1!=6&&int_1!=7&&int_1!=8&&int_1!=9)
+    { printf("Please input a valid first number");
+    valid=1;}
+  if (int_5!=0&&int_5!=1&&int_5!=2&&int_5!=3&&int_5!=4&&int_5!=5&&int_5!=6&&int_5!=7&&int_5!=8&&int_5!=9)
+    { printf("Please input a valid first number");
+    valid=1;}
+ /* if(difference!=4||difference!=0||int_1>=10||int_5>=10)//THERE'S AN ERROR HERE BECAUSE IT WILL ALWAYS BE TRUE
+  {printf("This input is invalid, please try again."); */}while(valid==1);
   if (difference==0)
-
   {int int_2=int_1;
-
    int int_3=int_1;
-
    int int_4=int_1;
-
      if (char_beg=='a')
-
       ah[int_1]=1, bh[int_2]=1, ch[int_3]=1, dh[int_4]=1;
-
     if (char_beg=='b')
-
       bh[int_1]=1, ch[int_2]=1, dh[int_3]=1, eh[int_4]=1;
-
     if (char_beg=='c')
-
       ch[int_1]=1, dh[int_2]=1, eh[int_3]=1, fh[int_4]=1;
-
     if (char_beg=='d')
-
       dh[int_1]=1, eh[int_2]=1, fh[int_3]=1, gh[int_4]=1;
-
     if (char_beg=='e')
-
       eh[int_1]=1, fh[int_2]=1, gh[int_3]=1, hh[int_4]=1;
-
     if (char_beg=='f')
-
       fh[int_1]=1, gh[int_2]=1, hh[int_3]=1, ih[int_4]=1;
-
     if (char_beg=='g')
-
       gh[int_1]=1, hh[int_2]=1, ih[int_3]=1, jh[int_4]=1;
-
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
-
     printf("Invalid letter, restart program\n");
-
   }
-
   if (difference==3)
-
   {int int_2=int_1-1;
-
    int int_3=int_2-1;
-
    int int_4=int_3-1;
-
   if (char_beg=='a')
-
       ah[int_1]=1, ah[int_2]=1, ah[int_3]=1, ah[int_4]=1;
-
     if (char_beg=='b')
-
       bh[int_1]=1, bh[int_2]=1, bh[int_3]=1, bh[int_4]=1;
-
     if (char_beg=='c')
-
       ch[int_1]=1, ch[int_2]=1, ch[int_3]=1, ch[int_4]=1;
-
     if (char_beg=='d')
-
       dh[int_1]=1, dh[int_2]=1, dh[int_3]=1, dh[int_4]=1;
-
     if (char_beg=='e')
-
       eh[int_1]=1, eh[int_2]=1, eh[int_3]=1, eh[int_4]=1;
-
     if (char_beg=='f')
-
       fh[int_1]=1, fh[int_2]=1, fh[int_3]=1, fh[int_4]=1;
-
     if (char_beg=='g')
-
       gh[int_1]=1, gh[int_2]=1, gh[int_3]=1, gh[int_4]=1;
-
     if (char_beg=='h')
-
       hh[int_1]=1, hh[int_2]=1, hh[int_3]=1, hh[int_4]=1;
-
     if (char_beg=='i')
-
       ih[int_1]=1, ih[int_2]=1, ih[int_3]=1, ih[int_4]=1;
-
     if (char_beg=='j')
-
       jh[int_1]=1, jh[int_2]=1, jh[int_3]=1, jh[int_4]=1;
-
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
-
     printf("Invalid letter, restart program\n");
-
   }
-
     if(difference!=0&&difference!=3)
-
     printf("Invalid Range, restart program\n");
-
         do{
-
         valid=0;
-
   printf("Where would you like to place your submarine? (3 spaces) You may only place it horizontally or vertically.\n");
-
   printf("Please enter it in form a3-a1 with the HIGHEST number first or the FIRST letter alphabetically first (ex:a1-c1)\n");
-
   scanf("%c%d-%c%d", &char_beg, &int_1, &char_end, &int_5);
-
     getchar();
-
                     int_1=int_1-1;
-
         int_5=int_5-1;
-
   difference = int_1-int_5;
-
-/*  if(difference!=3||difference!=0||int_1>=10||int_5>=10)
-
-  {printf("This input is invalid, please try again.");*/
-
-  valid=1;}
-
-    while(valid!=1);
-
+  if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
+  { printf("Please input a valid first letter");
+    valid=1;}
+  if (char_end!='a'&&char_end!='b'&&char_end!='c'&&char_end!='d'&&char_end!='e'&&char_end!='f'&&char_end!='g'&&char_end!='h'&&char_end!='i'&&char_end!='j')
+  { printf("Please input a valid second letter");
+    valid=1;}
+  if (int_1!=0&&int_1!=1&&int_1!=2&&int_1!=3&&int_1!=4&&int_1!=5&&int_1!=6&&int_1!=7&&int_1!=8&&int_1!=9)
+    { printf("Please input a valid first number");
+    valid=1;}
+  if (int_5!=0&&int_5!=1&&int_5!=2&&int_5!=3&&int_5!=4&&int_5!=5&&int_5!=6&&int_5!=7&&int_5!=8&&int_5!=9)
+    { printf("Please input a valid first number");
+    valid=1;}
+ /* if(difference!=4||difference!=0||int_1>=10||int_5>=10)//THERE'S AN ERROR HERE BECAUSE IT WILL ALWAYS BE TRUE
+  {printf("This input is invalid, please try again."); */}while(valid==1);
   if (difference==0)
-
   {int int_2=int_1;
-
    int int_3=int_1;
-
    int int_4=int_1;
-
      if (char_beg=='a')
-
       ah[int_1]=1, bh[int_2]=1, ch[int_3]=1;
-
     if (char_beg=='b')
-
       bh[int_1]=1, ch[int_2]=1, dh[int_3]=1;
-
     if (char_beg=='c')
-
       ch[int_1]=1, dh[int_2]=1, eh[int_3]=1;
-
     if (char_beg=='d')
-
       dh[int_1]=1, eh[int_2]=1, fh[int_3]=1;
-
     if (char_beg=='e')
-
       eh[int_1]=1, fh[int_2]=1, gh[int_3]=1;
-
     if (char_beg=='f')
-
       fh[int_1]=1, gh[int_2]=1, hh[int_3]=1;
-
     if (char_beg=='g')
-
       gh[int_1]=1, hh[int_2]=1, ih[int_3]=1;
-
     if (char_beg=='h')
-
       hh[int_1]=1, ih[int_2]=1, jh[int_3]=1;
-
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
-
     printf("Invalid letter, restart program\n");
-
   }
-
   if (difference==2)
-
   {int int_2=int_1-1;
-
    int int_3=int_2-1;
-
    int int_4=int_3-1;
-
   if (char_beg=='a')
-
       ah[int_1]=1, ah[int_2]=1, ah[int_3]=1;
-
     if (char_beg=='b')
-
       bh[int_1]=1, bh[int_2]=1, bh[int_3]=1;
-
     if (char_beg=='c')
-
       ch[int_1]=1, ch[int_2]=1, ch[int_3]=1;
-
     if (char_beg=='d')
-
       dh[int_1]=1, dh[int_2]=1, dh[int_3]=1;
-
     if (char_beg=='e')
-
       eh[int_1]=1, eh[int_2]=1, eh[int_3]=1;
-
     if (char_beg=='f')
-
       fh[int_1]=1, fh[int_2]=1, fh[int_3]=1;
-
     if (char_beg=='g')
-
       gh[int_1]=1, gh[int_2]=1, gh[int_3]=1;
-
     if (char_beg=='h')
-
       hh[int_1]=1, hh[int_2]=1, hh[int_3]=1;
-
     if (char_beg=='i')
-
       ih[int_1]=1, ih[int_2]=1, ih[int_3]=1;
-
     if (char_beg=='j')
-
       jh[int_1]=1, jh[int_2]=1, jh[int_3]=1;
-
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
-
     printf("Invalid letter, restart program\n");
-
   }
-
     if(difference!=0&&difference!=2)
-
     printf("Invalid Range, restart program\n");
-
          do{
-
         valid=0;
-
   printf("Where would you like to place your cruiser? (3 spaces) You may only place it horizontally or vertically.\n");
-
   printf("Please enter it in form a3-a1 with the HIGHEST number first or the FIRST letter alphabetically first (ex:a1-c1)\n");
-
   scanf("%c%d-%c%d", &char_beg, &int_1, &char_end, &int_5);
-
     getchar();
-
                      int_1=int_1-1;
-
         int_5=int_5-1;
-
   difference = int_1-int_5;
-
-/*  if(difference!=3||difference!=0||int_1>=10||int_5>=10)
-
-  {printf("This input is invalid, please try again.");*/
-
-  valid=1;}
-
-    while(valid!=1);
-
+  if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
+  { printf("Please input a valid first letter");
+    valid=1;}
+  if (char_end!='a'&&char_end!='b'&&char_end!='c'&&char_end!='d'&&char_end!='e'&&char_end!='f'&&char_end!='g'&&char_end!='h'&&char_end!='i'&&char_end!='j')
+  { printf("Please input a valid second letter");
+    valid=1;}
+  if (int_1!=0&&int_1!=1&&int_1!=2&&int_1!=3&&int_1!=4&&int_1!=5&&int_1!=6&&int_1!=7&&int_1!=8&&int_1!=9)
+    { printf("Please input a valid first number");
+    valid=1;}
+  if (int_5!=0&&int_5!=1&&int_5!=2&&int_5!=3&&int_5!=4&&int_5!=5&&int_5!=6&&int_5!=7&&int_5!=8&&int_5!=9)
+    { printf("Please input a valid first number");
+    valid=1;}
+ /* if(difference!=4||difference!=0||int_1>=10||int_5>=10)//THERE'S AN ERROR HERE BECAUSE IT WILL ALWAYS BE TRUE
+  {printf("This input is invalid, please try again."); */}while(valid==1);
   if (difference==0)
-
   {int int_2=int_1;
-
    int int_3=int_1;
-
    int int_4=int_1;
-
      if (char_beg=='a')
-
       ah[int_1]=1, bh[int_2]=1, ch[int_3]=1;
-
     if (char_beg=='b')
-
       bh[int_1]=1, ch[int_2]=1, dh[int_3]=1;
-
     if (char_beg=='c')
-
       ch[int_1]=1, dh[int_2]=1, eh[int_3]=1;
-
     if (char_beg=='d')
-
       dh[int_1]=1, eh[int_2]=1, fh[int_3]=1;
-
     if (char_beg=='e')
-
       eh[int_1]=1, fh[int_2]=1, gh[int_3]=1;
-
     if (char_beg=='f')
-
       fh[int_1]=1, gh[int_2]=1, hh[int_3]=1;
-
     if (char_beg=='g')
-
       gh[int_1]=1, hh[int_2]=1, ih[int_3]=1;
-
     if (char_beg=='h')
-
       hh[int_1]=1, ih[int_2]=1, jh[int_3]=1;
-
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
-
     printf("Invalid letter, restart program\n");
-
   }
-
   if (difference==2)
-
   {int int_2=int_1-1;
-
    int int_3=int_2-1;
-
    int int_4=int_3-1;
-
   if (char_beg=='a')
-
       ah[int_1]=1, ah[int_2]=1, ah[int_3]=1;
-
     if (char_beg=='b')
-
       bh[int_1]=1, bh[int_2]=1, bh[int_3]=1;
-
     if (char_beg=='c')
-
       ch[int_1]=1, ch[int_2]=1, ch[int_3]=1;
-
     if (char_beg=='d')
-
       dh[int_1]=1, dh[int_2]=1, dh[int_3]=1;
-
     if (char_beg=='e')
-
       eh[int_1]=1, eh[int_2]=1, eh[int_3]=1;
-
     if (char_beg=='f')
-
       fh[int_1]=1, fh[int_2]=1, fh[int_3]=1;
-
     if (char_beg=='g')
-
       gh[int_1]=1, gh[int_2]=1, gh[int_3]=1;
-
     if (char_beg=='h')
-
       hh[int_1]=1, hh[int_2]=1, hh[int_3]=1;
-
     if (char_beg=='i')
-
       ih[int_1]=1, ih[int_2]=1, ih[int_3]=1;
-
     if (char_beg=='j')
-
       jh[int_1]=1, jh[int_2]=1, jh[int_3]=1;
-
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
-
     printf("Invalid letter, restart program\n");
-
   }
-
     if(difference!=0&&difference!=2)
-
     printf("Invalid Range, restart program\n");
-
-
 
          do{
-
         valid=0;
-
   printf("Where would you like to place your destroyer? (2 spaces) You may only place it horizontally or vertically.\n");
-
   printf("Please enter it in form a2-a1 with the HIGHEST number first or the FIRST letter alphabetically first (ex:a1-b1)\n");
-
   scanf("%c%d-%c%d", &char_beg, &int_1, &char_end, &int_5);
-
     getchar();
-
           int_1=int_1-1;
-
         int_5=int_5-1;
-
   difference = int_1-int_5;
-
-/*  if(difference!=3||difference!=0||int_1>=10||int_5>=10)
-
-  {printf("This input is invalid, please try again.");*/
-
-  valid=1;}
-
-    while(valid!=1);
-
+  if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
+  { printf("Please input a valid first letter");
+    valid=1;}
+  if (char_end!='a'&&char_end!='b'&&char_end!='c'&&char_end!='d'&&char_end!='e'&&char_end!='f'&&char_end!='g'&&char_end!='h'&&char_end!='i'&&char_end!='j')
+  { printf("Please input a valid second letter");
+    valid=1;}
+  if (int_1!=0&&int_1!=1&&int_1!=2&&int_1!=3&&int_1!=4&&int_1!=5&&int_1!=6&&int_1!=7&&int_1!=8&&int_1!=9)
+    { printf("Please input a valid first number");
+    valid=1;}
+  if (int_5!=0&&int_5!=1&&int_5!=2&&int_5!=3&&int_5!=4&&int_5!=5&&int_5!=6&&int_5!=7&&int_5!=8&&int_5!=9)
+    { printf("Please input a valid first number");
+    valid=1;}
+ /* if(difference!=4||difference!=0||int_1>=10||int_5>=10)//THERE'S AN ERROR HERE BECAUSE IT WILL ALWAYS BE TRUE
+  {printf("This input is invalid, please try again."); */}while(valid==1);
   if (difference==0)
-
   {int int_2=int_1;
-
    int int_3=int_1;
-
    int int_4=int_1;
-
      if (char_beg=='a')
-
       ah[int_1]=1, bh[int_2]=1;
-
     if (char_beg=='b')
-
       bh[int_1]=1, ch[int_2]=1;
-
     if (char_beg=='c')
-
       ch[int_1]=1, dh[int_2]=1;
-
     if (char_beg=='d')
-
       dh[int_1]=1, eh[int_2]=1;
-
     if (char_beg=='e')
-
       eh[int_1]=1, fh[int_2]=1;
-
     if (char_beg=='f')
-
       fh[int_1]=1, gh[int_2]=1;
-
     if (char_beg=='g')
-
       gh[int_1]=1, hh[int_2]=1;
-
     if (char_beg=='h')
-
       hh[int_1]=1, ih[int_2]=1;
-
     if (char_beg=='i')
-
       ih[int_1]=1, jh[int_2]=1;
-
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f')
-
     printf("Invalid letter, restart program\n");
-
   }
-
-
-
   if (difference==1)
-
   {int int_2=abs(int_1-1);
-
    int int_3=int_2-1;
-
    int int_4=int_3-1;
-
   if (char_beg=='a')
-
       ah[int_1]=1, ah[int_2]=1;
-
     if (char_beg=='b')
-
       bh[int_1]=1, bh[int_2]=1;
-
     if (char_beg=='c')
-
       ch[int_1]=1, ch[int_2]=1;
-
     if (char_beg=='d')
-
       dh[int_1]=1, dh[int_2]=1;
-
     if (char_beg=='e')
-
       eh[int_1]=1, eh[int_2]=1;
-
     if (char_beg=='f')
-
       fh[int_1]=1, fh[int_2]=1;
-
     if (char_beg=='g')
-
       gh[int_1]=1, gh[int_2]=1;
-
     if (char_beg=='h')
-
       hh[int_1]=1, hh[int_2]=1;
-
     if (char_beg=='i')
-
       ih[int_1]=1, ih[int_2]=1;
-
     if (char_beg=='j')
-
       jh[int_1]=1, jh[int_2]=1;
-
     if (char_beg!='a'&&char_beg!='b'&&char_beg!='c'&&char_beg!='d'&&char_beg!='e'&&char_beg!='f'&&char_beg!='g'&&char_beg!='h'&&char_beg!='i'&&char_beg!='j')
-
     printf("Invalid letter, restart program\n");
-
   }
-
     if(difference!=0&&difference!=1)
-
     printf("Invalid Range, restart program\n");
+
+
+      printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", ah[0], ah[0], ah[0], ah[0], ah[0], ah[1], ah[1], ah[1], ah[1], ah[1], ah[2], ah[2], ah[2], ah[2], ah[2], ah[3], ah[3], ah[3], ah[3], ah[3], ah[4], ah[4], ah[4], ah[4], ah[4], ah[5], ah[5], ah[5], ah[5], ah[5], ah[6], ah[6], ah[6], ah[6], ah[6], ah[7], ah[7], ah[7], ah[7], ah[7], ah[8], ah[8], ah[8], ah[8], ah[8], ah[9], ah[9], ah[9], ah[9], ah[9], ah[10], ah[10], ah[10], ah[10], ah[10]);
+
+  printf("    ___________________________________________________________\n");
+
+  printf("B  |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", bh[0], bh[0], bh[0], bh[0], bh[0], bh[1], bh[1], bh[1], bh[1], bh[1], bh[2], bh[2], bh[2], bh[2], bh[2], bh[3], bh[3], bh[3], bh[3], bh[3], bh[4], bh[4], bh[4], bh[4], bh[4], bh[5], bh[5], bh[5], bh[5], bh[5], bh[6], bh[6], bh[6], bh[6], bh[6], bh[7], bh[7], bh[7], bh[7], bh[7], bh[8], bh[8], bh[8], bh[8], bh[8], bh[9], bh[9], bh[9], bh[9], bh[9], bh[10], bh[10], bh[10], bh[10], bh[10]);
+
+  printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", bh[0], bh[0], bh[0], bh[0], bh[0], bh[1], bh[1], bh[1], bh[1], bh[1], bh[2], bh[2], bh[2], bh[2], bh[2], bh[3], bh[3], bh[3], bh[3], bh[3], bh[4], bh[4], bh[4], bh[4], bh[4], bh[5], bh[5], bh[5], bh[5], bh[5], bh[6], bh[6], bh[6], bh[6], bh[6], bh[7], bh[7], bh[7], bh[7], bh[7], bh[8], bh[8], bh[8], bh[8], bh[8], bh[9], bh[9], bh[9], bh[9], bh[9], bh[10], bh[10], bh[10], bh[10], bh[10]);
+
+  printf("    ___________________________________________________________\n");
+
+  printf("C  |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", ch[0], ch[0], ch[0], ch[0], ch[0], ch[1], ch[1], ch[1], ch[1], ch[1], ch[2], ch[2], ch[2], ch[2], ch[2], ch[3], ch[3], ch[3], ch[3], ch[3], ch[4], ch[4], ch[4], ch[4], ch[4], ch[5], ch[5], ch[5], ch[5], ch[5], ch[6], ch[6], ch[6], ch[6], ch[6], ch[7], ch[7], ch[7], ch[7], ch[7], ch[8], ch[8], ch[8], ch[8], ch[8], ch[9], ch[9], ch[9], ch[9], ch[9], ch[10], ch[10], ch[10], ch[10], ch[10]);
+
+  printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", ch[0], ch[0], ch[0], ch[0], ch[0], ch[1], ch[1], ch[1], ch[1], ch[1], ch[2], ch[2], ch[2], ch[2], ch[2], ch[3], ch[3], ch[3], ch[3], ch[3], ch[4], ch[4], ch[4], ch[4], ch[4], ch[5], ch[5], ch[5], ch[5], ch[5], ch[6], ch[6], ch[6], ch[6], ch[6], ch[7], ch[7], ch[7], ch[7], ch[7], ch[8], ch[8], ch[8], ch[8], ch[8], ch[9], ch[9], ch[9], ch[9], ch[9], ch[10], ch[10], ch[10], ch[10], ch[10]);
+
+  printf("    ___________________________________________________________\n");
+
+  printf("D  |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", dh[0], dh[0], dh[0], dh[0], dh[0], dh[1], dh[1], dh[1], dh[1], dh[1], dh[2], dh[2], dh[2], dh[2], dh[2], dh[3], dh[3], dh[3], dh[3], dh[3], dh[4], dh[4], dh[4], dh[4], dh[4], dh[5], dh[5], dh[5], dh[5], dh[5], dh[6], dh[6], dh[6], dh[6], dh[6], dh[7], dh[7], dh[7], dh[7], dh[7], dh[8], dh[8], dh[8], dh[8], dh[8], dh[9], dh[9], dh[9], dh[9], dh[9], dh[10], dh[10], dh[10], dh[10], dh[10]);
+
+  printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", dh[0], dh[0], dh[0], dh[0], dh[0], dh[1], dh[1], dh[1], dh[1], dh[1], dh[2], dh[2], dh[2], dh[2], dh[2], dh[3], dh[3], dh[3], dh[3], dh[3], dh[4], dh[4], dh[4], dh[4], dh[4], dh[5], dh[5], dh[5], dh[5], dh[5], dh[6], dh[6], dh[6], dh[6], dh[6], dh[7], dh[7], dh[7], dh[7], dh[7], dh[8], dh[8], dh[8], dh[8], dh[8], dh[9], dh[9], dh[9], dh[9], dh[9], dh[10], dh[10], dh[10], dh[10], dh[10]);
+
+  printf("    ___________________________________________________________\n");
+
+  printf("E  |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", eh[0], eh[0], eh[0], eh[0], eh[0], eh[1], eh[1], eh[1], eh[1], eh[1], eh[2], eh[2], eh[2], eh[2], eh[2], eh[3], eh[3], eh[3], eh[3], eh[3], eh[4], eh[4], eh[4], eh[4], eh[4], eh[5], eh[5], eh[5], eh[5], eh[5], eh[6], eh[6], eh[6], eh[6], eh[6], eh[7], eh[7], eh[7], eh[7], eh[7], eh[8], eh[8], eh[8], eh[8], eh[8], eh[9], eh[9], eh[9], eh[9], eh[9], eh[10], eh[10], eh[10], eh[10], eh[10]);
+
+  printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", eh[0], eh[0], eh[0], eh[0], eh[0], eh[1], eh[1], eh[1], eh[1], eh[1], eh[2], eh[2], eh[2], eh[2], eh[2], eh[3], eh[3], eh[3], eh[3], eh[3], eh[4], eh[4], eh[4], eh[4], eh[4], eh[5], eh[5], eh[5], eh[5], eh[5], eh[6], eh[6], eh[6], eh[6], eh[6], eh[7], eh[7], eh[7], eh[7], eh[7], eh[8], eh[8], eh[8], eh[8], eh[8], eh[9], eh[9], eh[9], eh[9], eh[9], eh[10], eh[10], eh[10], eh[10], eh[10]);
+
+  printf("    ___________________________________________________________\n");
+
+  printf("F  |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", fh[0], fh[0], fh[0], fh[0], fh[0], fh[1], fh[1], fh[1], fh[1], fh[1], fh[2], fh[2], fh[2], fh[2], fh[2], fh[3], fh[3], fh[3], fh[3], fh[3], fh[4], fh[4], fh[4], fh[4], fh[4], fh[5], fh[5], fh[5], fh[5], fh[5], fh[6], fh[6], fh[6], fh[6], fh[6], fh[7], fh[7], fh[7], fh[7], fh[7], fh[8], fh[8], fh[8], fh[8], fh[8], fh[9], fh[9], fh[9], fh[9], fh[9], fh[10], fh[10], fh[10], fh[10], fh[10]);
+
+  printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", fh[0], fh[0], fh[0], fh[0], fh[0], fh[1], fh[1], fh[1], fh[1], fh[1], fh[2], fh[2], fh[2], fh[2], fh[2], fh[3], fh[3], fh[3], fh[3], fh[3], fh[4], fh[4], fh[4], fh[4], fh[4], fh[5], fh[5], fh[5], fh[5], fh[5], fh[6], fh[6], fh[6], fh[6], fh[6], fh[7], fh[7], fh[7], fh[7], fh[7], fh[8], fh[8], fh[8], fh[8], fh[8], fh[9], fh[9], fh[9], fh[9], fh[9], fh[10], fh[10], fh[10], fh[10], fh[10]);
+
+  printf("    ___________________________________________________________\n");
+
+  printf("G  |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", gh[0], gh[0], gh[0], gh[0], gh[0], gh[1], gh[1], gh[1], gh[1], gh[1], gh[2], gh[2], gh[2], gh[2], gh[2], gh[3], gh[3], gh[3], gh[3], gh[3], gh[4], gh[4], gh[4], gh[4], gh[4], gh[5], gh[5], gh[5], gh[5], gh[5], gh[6], gh[6], gh[6], gh[6], gh[6], gh[7], gh[7], gh[7], gh[7], gh[7], gh[8], gh[8], gh[8], gh[8], gh[8], gh[9], gh[9], gh[9], gh[9], gh[9], gh[10], gh[10], gh[10], gh[10], gh[10]);
+
+  printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", gh[0], gh[0], gh[0], gh[0], gh[0], gh[1], gh[1], gh[1], gh[1], gh[1], gh[2], gh[2], gh[2], gh[2], gh[2], gh[3], gh[3], gh[3], gh[3], gh[3], gh[4], gh[4], gh[4], gh[4], gh[4], gh[5], gh[5], gh[5], gh[5], gh[5], gh[6], gh[6], gh[6], gh[6], gh[6], gh[7], gh[7], gh[7], gh[7], gh[7], gh[8], gh[8], gh[8], gh[8], gh[8], gh[9], gh[9], gh[9], gh[9], gh[9], gh[10], gh[10], gh[10], gh[10], gh[10]);
+
+  printf("    ___________________________________________________________\n");
+
+  printf("H  |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", hh[0], hh[0], hh[0], hh[0], hh[0], hh[1], hh[1], hh[1], hh[1], hh[1], hh[2], hh[2], hh[2], hh[2], hh[2], hh[3], hh[3], hh[3], hh[3], hh[3], hh[4], hh[4], hh[4], hh[4], hh[4], hh[5], hh[5], hh[5], hh[5], hh[5], hh[6], hh[6], hh[6], hh[6], hh[6], hh[7], hh[7], hh[7], hh[7], hh[7], hh[8], hh[8], hh[8], hh[8], hh[8], hh[9], hh[9], hh[9], hh[9], hh[9], hh[10], hh[10], hh[10], hh[10], hh[10]);
+
+  printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", hh[0], hh[0], hh[0], hh[0], hh[0], hh[1], hh[1], hh[1], hh[1], hh[1], hh[2], hh[2], hh[2], hh[2], hh[2], hh[3], hh[3], hh[3], hh[3], hh[3], hh[4], hh[4], hh[4], hh[4], hh[4], hh[5], hh[5], hh[5], hh[5], hh[5], hh[6], hh[6], hh[6], hh[6], hh[6], hh[7], hh[7], hh[7], hh[7], hh[7], hh[8], hh[8], hh[8], hh[8], hh[8], hh[9], hh[9], hh[9], hh[9], hh[9], hh[10], hh[10], hh[10], hh[10], hh[10]);
+
+  printf("    ___________________________________________________________\n");
+
+  printf("I  |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", ih[0], ih[0], ih[0], ih[0], ih[0], ih[1], ih[1], ih[1], ih[1], ih[1], ih[2], ih[2], ih[2], ih[2], ih[2], ih[3], ih[3], ih[3], ih[3], ih[3], ih[4], ih[4], ih[4], ih[4], ih[4], ih[5], ih[5], ih[5], ih[5], ih[5], ih[6], ih[6], ih[6], ih[6], ih[6], ih[7], ih[7], ih[7], ih[7], ih[7], ih[8], ih[8], ih[8], ih[8], ih[8], ih[9], ih[9], ih[9], ih[9], ih[9], ih[10], ih[10], ih[10], ih[10], ih[10]);
+
+  printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", ih[0], ih[0], ih[0], ih[0], ih[0], ih[1], ih[1], ih[1], ih[1], ih[1], ih[2], ih[2], ih[2], ih[2], ih[2], ih[3], ih[3], ih[3], ih[3], ih[3], ih[4], ih[4], ih[4], ih[4], ih[4], ih[5], ih[5], ih[5], ih[5], ih[5], ih[6], ih[6], ih[6], ih[6], ih[6], ih[7], ih[7], ih[7], ih[7], ih[7], ih[8], ih[8], ih[8], ih[8], ih[8], ih[9], ih[9], ih[9], ih[9], ih[9], ih[10], ih[10], ih[10], ih[10], ih[10]);
+
+  printf("    ___________________________________________________________\n");
+
+  printf("J  |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", jh[0], jh[0], jh[0], jh[0], jh[0], jh[1], jh[1], jh[1], jh[1], jh[1], jh[2], jh[2], jh[2], jh[2], jh[2], jh[3], jh[3], jh[3], jh[3], jh[3], jh[4], jh[4], jh[4], jh[4], jh[4], jh[5], jh[5], jh[5], jh[5], jh[5], jh[6], jh[6], jh[6], jh[6], jh[6], jh[7], jh[7], jh[7], jh[7], jh[7], jh[8], jh[8], jh[8], jh[8], jh[8], jh[9], jh[9], jh[9], jh[9], jh[9], jh[10], jh[10], jh[10], jh[10], jh[10]);
+
+  printf("   |%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|%d%d%d%d%d|\n", jh[0], jh[0], jh[0], jh[0], jh[0], jh[1], jh[1], jh[1], jh[1], jh[1], jh[2], jh[2], jh[2], jh[2], jh[2], jh[3], jh[3], jh[3], jh[3], jh[3], jh[4], jh[4], jh[4], jh[4], jh[4], jh[5], jh[5], jh[5], jh[5], jh[5], jh[6], jh[6], jh[6], jh[6], jh[6], jh[7], jh[7], jh[7], jh[7], jh[7], jh[8], jh[8], jh[8], jh[8], jh[8], jh[9], jh[9], jh[9], jh[9], jh[9], jh[10], jh[10], jh[10], jh[10], jh[10]);
 
 }//end of function place_ships
 
