@@ -1635,119 +1635,119 @@ void user_shoots(char input_char, int input_int)
   if (input_char=='a')
 {
 
-   a[input_int]=ah2[input_int];
-     if (a[input_int]==1)
+   a2[input_int]=ah2[input_int];
+     if (a2[input_int]==1)
 {
-           a[input_int]='X';
+           a2[input_int]='X';
            hits=hits+1;
 }
         else
-            a[input_int]='0';
+            a2[input_int]='0';
 }
     if (input_char=='b')
 {
-     b[input_int]=bh2[input_int];
-     if (b[input_int]=1)
+     b2[input_int]=bh2[input_int];
+     if (b2[input_int]=1)
 {
-           b[input_int]='X';
+           b2[input_int]='X';
             hits=hits+1;
 }
         else
-            b[input_int]='0';
+            b2[input_int]='0';
 }
     if (input_char=='c')
 {
-   c[input_int]=ch2[input_int];
-   if (c[input_int]=1)
+   c2[input_int]=ch2[input_int];
+   if (c2[input_int]=1)
 {
-           c[input_int]='X';
+           c2[input_int]='X';
             hits=hits+1;
 }
         else
-            c[input_int]='0';
+            c2[input_int]='0';
 }
     if (input_char=='d')
 {
-    d[input_int]=dh2[input_int];
-    if (d[input_int]=1)
+    d2[input_int]=dh2[input_int];
+    if (d2[input_int]=1)
 {
-           d[input_int]='X';
+           d2[input_int]='X';
             hits=hits+1;
 }
         else
-            d[input_int]='0';
+            d2[input_int]='0';
 }
     if (input_char=='e')
 {
 
-    e[input_int]=eh2[input_int];
-    if (e[input_int]=1)
+    e2[input_int]=eh2[input_int];
+    if (e2[input_int]=1)
 {
-           e[input_int]='X';
+           e2[input_int]='X';
             hits=hits+1;
 }
         else
-            e[input_int]='0';
+            e2[input_int]='0';
 }
 
     if (input_char=='f')
 {
-    f[input_int]=fh2[input_int];
-    if (f[input_int]=1)
+    f2[input_int]=fh2[input_int];
+    if (f2[input_int]=1)
 {
-           f[input_int]='X';
+           f2[input_int]='X';
             hits=hits+1;
 }
         else
-            f[input_int]='0';
+            f2[input_int]='0';
 }
 
     if (input_char=='g')
 {
-    g[input_int]=gh2[input_int];
-    if (g[input_int]=1)
+    g2[input_int]=gh2[input_int];
+    if (g2[input_int]=1)
 {
-           g[input_int]='X';
+           g2[input_int]='X';
             hits=hits+1;
 }
         else
-            g[input_int]='0';
+            g2[input_int]='0';
 }
 
     if (input_char=='h')
 {
-     h[input_int]=hh2[input_int];
-     if (h[input_int]=1)
+     h2[input_int]=hh2[input_int];
+     if (h2[input_int]=1)
 {
-           h[input_int]='X';
+           h2[input_int]='X';
             hits=hits+1;
 }
         else
-            h[input_int]='0';
+            h2[input_int]='0';
 }
 
     if (input_char=='i')
 {
-     i[input_int]=ih2[input_int];
-     if (i[input_int]=1)
+     i2[input_int]=ih2[input_int];
+     if (i2[input_int]=1)
      {
-           i[input_int]='X';
+           i2[input_int]='X';
             hits=hits+1;
 }
         else
-            i[input_int]='0';
+            i2[input_int]='0';
 }
 
     if (input_char=='j')
 {
-     j[input_int]=jh2[input_int];
-     if (j[input_int]=1)
+     j2[input_int]=jh2[input_int];
+     if (j2[input_int]=1)
 {
-           j[input_int]='X';
+           j2[input_int]='X';
             hits=hits+1;
 }
         else
-            j[input_int]='0';
+            j2[input_int]='0';
 }
 
 }
@@ -2935,7 +2935,8 @@ return J9;
 
 
 int struct_int_return(struct loc x)
-{    return x.element;
+{
+    return x.element;
 }
 char struct_char_return(struct loc x)
 {
@@ -2965,119 +2966,119 @@ void enemy_shoots(char input_char, int input_int)
   if (input_char=='a')
 {
 
-   a[input_int]=ah[input_int];
-     if (a[input_int]==1)
+   a2[input_int]=ah[input_int];
+     if (a2[input_int]==1)
 {
-           a[input_int]='X';
+           a2[input_int]='X';
            enemy_hits++;
 }
         else
-            a[input_int]='0';
+            a2[input_int]='0';
 }
     if (input_char=='b')
 {
-     b[input_int]=bh[input_int];
-     if (b[input_int]=1)
+     b2[input_int]=bh[input_int];
+     if (b2[input_int]=1)
 {
-           b[input_int]='X';
+           b2[input_int]='X';
             enemy_hits++;
 }
         else
-            b[input_int]='0';
+            b2[input_int]='0';
 }
     if (input_char=='c')
 {
-   c[input_int]=ch[input_int];
-   if (c[input_int]=1)
+   c2[input_int]=ch[input_int];
+   if (c2[input_int]=1)
 {
-           c[input_int]='X';
+           c2[input_int]='X';
             enemy_hits++;
 }
         else
-            c[input_int]='0';
+            c2[input_int]='0';
 }
     if (input_char=='d')
 {
-    d[input_int]=dh[input_int];
-    if (d[input_int]=1)
+    d2[input_int]=dh[input_int];
+    if (d2[input_int]=1)
 {
-           d[input_int]='X';
+           d2[input_int]='X';
             enemy_hits++;
 }
         else
-            d[input_int]='0';
+            d2[input_int]='0';
 }
     if (input_char=='e')
 {
 
-    e[input_int]=eh[input_int];
-    if (e[input_int]=1)
+    e2[input_int]=eh[input_int];
+    if (e2[input_int]=1)
 {
-           e[input_int]='X';
+           e2[input_int]='X';
             enemy_hits++;
 }
         else
-            e[input_int]='0';
+            e2[input_int]='0';
 }
 
     if (input_char=='f')
 {
-    f[input_int]=fh[input_int];
-    if (f[input_int]=1)
+    f2[input_int]=fh[input_int];
+    if (f2[input_int]=1)
 {
-           f[input_int]='X';
+           f2[input_int]='X';
             enemy_hits++;
 }
         else
-            f[input_int]='0';
+            f2[input_int]='0';
 }
 
     if (input_char=='g')
 {
-    g[input_int]=gh[input_int];
-    if (g[input_int]=1)
+    g2[input_int]=gh[input_int];
+    if (g2[input_int]=1)
 {
-           g[input_int]='X';
+           g2[input_int]='X';
             enemy_hits++;
 }
         else
-            g[input_int]='0';
+            g2[input_int]='0';
 }
 
     if (input_char=='h')
 {
-     h[input_int]=hh[input_int];
-     if (h[input_int]=1)
+     h2[input_int]=hh[input_int];
+     if (h2[input_int]=1)
 {
-           h[input_int]='X';
+           h2[input_int]='X';
             enemy_hits++;
 }
         else
-            h[input_int]='0';
+            h2[input_int]='0';
 }
 
     if (input_char=='i')
 {
-     i[input_int]=ih[input_int];
-     if (i[input_int]=1)
+     i2[input_int]=ih[input_int];
+     if (i2[input_int]=1)
      {
-           i[input_int]='X';
+           i2[input_int]='X';
             enemy_hits++;
 }
         else
-            i[input_int]='0';
+            i2[input_int]='0';
 }
 
     if (input_char=='j')
 {
-     j[input_int]=jh[input_int];
-     if (j[input_int]=1)
+     j2[input_int]=jh[input_int];
+     if (j2[input_int]=1)
 {
-           j[input_int]='X';
+           j2[input_int]='X';
             enemy_hits++;
 }
         else
-            j[input_int]='0';
+            j2[input_int]='0';
 }
 
 }
