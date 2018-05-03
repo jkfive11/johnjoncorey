@@ -1,24 +1,11 @@
 //BattleShip
-
-
-
 //Jonathan Keller, Corey Hupper, and John Lowery
-
-
-
-
-
-
 
 #include <stdio.h>
 
 #include <stdlib.h>
 
 #include <math.h>
-
-
-
-
 
 
 
