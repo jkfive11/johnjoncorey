@@ -1637,8 +1637,8 @@ input_int=input_int-1;
 
 
 
-   a2[input_int]=ah2[input_int];
-     if (a2[input_int]==1)
+   //a2[input_int]=ah2[input_int];
+     if (ah2[input_int]==1)
 {
            a2[input_int]='X';
            hits=hits+1;
