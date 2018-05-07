@@ -3678,6 +3678,10 @@ if (difficulty=='e')
         print_screen();
     }
 }
+if (enemy_hits>=17)
+{printf("You Lost...Please Try Again!");}
+if (hits>=17)
+{printf("YOU WIN!! CONGRATS!!");}
 printf("Program Ended. Thank You For Playing!");
 return 0;
 
