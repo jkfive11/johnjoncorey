@@ -1573,7 +1573,7 @@ void print_screen()//will be 5 spaces in between each vertical line filled with 
 
 {
 
-//system("cls");
+system("cls");
 
 
 
